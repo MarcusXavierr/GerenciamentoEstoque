@@ -7,7 +7,7 @@
                 @csrf
                 <div class="mt-2">
                     <label for="productName" class="form-label">Nome do produto</label>
-                    <input type="text" name="name" class="form-control">
+                    <input type="text" name="name" class="form-control"  value="{{old('name')}}">
                     @if ($errors->has('name'))
                         <span class="help-block text-sm text-danger ">
                             {{ $errors->first('name') }}
@@ -16,7 +16,7 @@
                 </div>
                 <div class="mt-2">
                     <label for="productPrice" class="form-label">Preço</label>
-                    <input type="text" name="price" id="productPrice" class="form-control">
+                    <input type="text" name="price" id="productPrice" class="form-control"  value="{{old('price')}}">
                     @if ($errors->has('price'))
                         <span class="help-block text-sm text-danger ">
                             {{ $errors->first('price') }}
@@ -25,7 +25,7 @@
                 </div>
                 <div class="mt-2">
                     <label for="productDescription" class="form-label">Descrição do produto</label>
-                    <input type="text" name="description" class="form-control">
+                    <input type="text" name="description" class="form-control"   value="{{old('description')}}">
                     @if ($errors->has('description'))
                         <span class="help-block text-sm text-danger ">
                             {{ $errors->first('description') }}
@@ -34,10 +34,10 @@
                 </div> 
                 <div class="mt-2">
                     <label for="productSKU" class="form-label">SKU</label>
-                    <input type="text" name="SKU" class="form-control">
-                    @if ($errors->has('sku'))
+                    <input type="text" name="SKU" class="form-control"   value="{{old('SKU')}}">
+                    @if ($errors->has('SKU'))
                         <span class="help-block text-sm text-danger ">
-                            {{ $errors->first('sku') }}
+                            {{ $errors->first('SKU') }}
                         </span>
                     @endif
                 </div>
