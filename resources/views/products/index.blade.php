@@ -19,7 +19,7 @@
                     <tr>
                         <td>{{$product->name}}</td>
                         <td>{{$product->SKU}}</td>
-                        <td>{{$product->price}}</td>
+                        <td>R$ {{number_format($product->price, 2, ',', '.')}}</td>
                         <td>{{$product->stock->products_in_stock}}</td>
                         <td>
                             <div class="btn-group flex-wrap">
