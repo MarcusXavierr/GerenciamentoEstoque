@@ -1,0 +1,72 @@
+version: '3.7'
+services:
+  # Banco de dados
+  db_appmax_test:
+    image: mysql:5.7
+    container_name: db_appmax_test
+    restart: unless-stopped
+    environment:
+      MYSQL_DATABASE: ${DB_DATABASE}
+      MYSQL_ROOT_PASSWORD: ${DB_PASSWORD}
+      MYSQL_PASSWORD: ${DB_PASSWORD}
+      MYSQL_USER: ${DB_USERNAME}
+      SERVICE_TAGS: dev
+      SERVICE_NAME: mysql
+    volumes:
+      - appmax-data:/var/lib/mysql
+    networks:
+      - application
+
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin
+    container_name: phpmyadmin
+    environment:
+      PMA_HOST: db_appmax_test
+    depends_on:
+      - db_appmax_test
+    ports:
+      - "8080:80"
+    links:
+      - db_appmax_test
+    networks:
+      - application
+
+  app:
+    build:
+      args:
+        user: ${USER}
+        uid: ${UID}
+      context: ./
+      dockerfile: Dockerfile
+    image: ${APP_NAME}
+    container_name: app
+    depends_on:
+      - db_appmax_test
+    restart: unless-stopped
+    expose:
+      - 80
+    environment:
+      - VIRTUAL_HOST=mcc.localhost
+    working_dir: /var/www/
+    volumes:
+      - ./:/var/www
+    networks:
+      - application
+
+  nginx:
+    image: nginx:alpine
+    container_name: nginx
+    restart: unless-stopped
+    ports:
+      - 80:80
+    volumes:
+      - ./:/var/www
+      - ./docker-compose/nginx:/etc/nginx/conf.d/
+    networks:
+      - application
+networks:
+  application:
+    name: "appmax-teste"
+
+volumes:
+  appmax-data:
