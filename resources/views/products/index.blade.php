@@ -11,6 +11,7 @@
                     <th>SKU</th>
                     <th>Preço</th>
                     <th>Estoque</th>
+                    <th>Actions</th>
                 </tr>
             </thead>
             <tbody>
@@ -20,6 +21,12 @@
                         <td>{{$product->SKU}}</td>
                         <td>{{$product->price}}</td>
                         <td>{{$product->stock->products_in_stock}}</td>
+                        <td>
+                            <div class="btn-group flex-wrap">
+                                <a class="btn btn-outline-primary btn-sm" href="{{route('product.edit', ['product' => $product->id])}}">Editar</a>
+                                <x-delete-item :item="$product" :route="route('product.destroy', ['product' => $product->id])"/>
+                            </div>
+                        </td>
                     </tr>
                 @endforeach
             </tbody>
