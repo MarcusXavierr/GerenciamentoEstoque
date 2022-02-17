@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Helpers\TreatStringInput;
+use App\Http\Requests\ProductFormRequest;
 use App\Models\Product;
 use Exception;
 use Illuminate\Http\Request;
@@ -45,7 +46,7 @@ class ProductController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(ProductFormRequest $request)
     {
         $data = $request->all();
         $data['price'] = $this->treatString->convertStringToFloat($data['price']);
