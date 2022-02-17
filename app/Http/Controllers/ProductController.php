@@ -17,6 +17,7 @@ class ProductController extends Controller
     public function __construct()
     {
         $this->treatString = new TreatStringInput();
+        $this->middleware('auth');
     }
 
     /**
