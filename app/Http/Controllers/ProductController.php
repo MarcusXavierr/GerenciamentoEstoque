@@ -49,27 +49,16 @@ class ProductController extends Controller
     {
         $data = $request->all();
         $data['price'] = $this->treatString->convertStringToFloat($data['price']);
-        if ($this->checkForDuplicatedProduct($data['SKU'])) {
+
+        $success = $this->tryToSaveProductInDB($data);
+
+        if (!$success) {
+            notify()->error('Houve um erro no banco de dados, por favor tente mais terde novamente', 'Erro ao criar produto');
             return redirect()->route('product.create');
         }
 
-        $success = $this->tryToCreateProduct($data);
-        if (!$success) {
-            return 'Error ao criar produto no banco de dados';
-        }
-
+        notify()->success("Produto criado com sucesso", 'Tudo ok');
         return redirect()->route('product.index');
-    }
-
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function show($id)
-    {
-        //
     }
 
     /**
@@ -80,7 +69,8 @@ class ProductController extends Controller
      */
     public function edit($id)
     {
-        //
+        $product = Product::findOrFail($id);
+        return view('products.edit', compact('product'));
     }
 
     /**
@@ -92,7 +82,20 @@ class ProductController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $data = $request->all();
+
+        $data['price'] = $this->treatString->convertStringToFloat($data['price']);
+        $product = Product::findOrFail($id);
+
+        try {
+            $product->update($data);
+        } catch (Exception) {
+            notify()->error('Houve um erro no banco de dados, por favor tente mais terde novamente', 'Erro ao atualizar produto');
+            return redirect()->route('product.edit', ['product' => $id]);
+        }
+
+        notify()->success("Produto atualizado com sucesso", 'Tudo ok');
+        return redirect()->route('product.index');
     }
 
     /**
@@ -103,22 +106,25 @@ class ProductController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $product = Product::findOrFail($id);
+
+        try {
+            $product->delete();
+        } catch (Exception) {
+            notify()->error('Houve um erro no banco de dados, por favor tente mais terde novamente', 'Erro ao deletar produto');
+            return redirect()->route('product.edit', ['product' => $id]);
+        }
+
+        notify()->success("Produto deletado com sucesso", 'Tudo ok');
+        return redirect()->route('product.index');
     }
 
 
     /**
      * returns true if there are duplicates
      */
-    private function checkForDuplicatedProduct(string $sku): bool
-    {
-        $result = DB::table('products')->selectRaw('count(*) AS counter')
-            ->where('SKU', $sku)->first();
 
-        return $result->counter != 0;
-    }
-
-    private function tryToCreateProduct(array $data): bool
+    private function tryToSaveProductInDB(array $data): bool
     {
         $isCreated = true;
         //I'm going to try to create a product, 
@@ -127,7 +133,7 @@ class ProductController extends Controller
             $product = new Product();
             $product = $product->create($data);
             $product->stock()->create(['products_in_stock' => 0]);
-        } catch (Exception $exception) {
+        } catch (Exception) {
             $isCreated = false;
         }
 
