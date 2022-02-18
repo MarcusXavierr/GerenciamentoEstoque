@@ -22,3 +22,10 @@ Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::resource('product', 'App\Http\Controllers\ProductController');
+
+
+Route::get('/adicionar-produtos', "App\Http\Controllers\StockMovementController@screenAddStock")
+    ->name('stock.display-add');
+
+Route::get('/baixar-produtos', 'App\Http\Controllers\StockMovementController@screenRemoveStock')
+    ->name('stock.display-remove');
