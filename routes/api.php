@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\StockMovementController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -17,3 +18,7 @@ use Illuminate\Support\Facades\Route;
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+
+Route::post('/api/adicionar-produtos', "App\Http\Controllers\StockMovementController@addStock")->name('stock.add');
+Route::post('/api/baixar-produtos', "App\Http\Controllers\StockMovementController@removeStock")->name('stock.remove');
