@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\StockMovementMvcController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
@@ -22,3 +23,8 @@ Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::resource('product', 'App\Http\Controllers\ProductController');
+
+Route::get('/adicionar-produtos/{id}', [StockMovementMvcController::class, 'showAddProductPage'])->name('stock.add.show');
+Route::get('/baixar-produtos/{id}', [StockMovementMvcController::class, 'showRemoveProductPage'])->name('stock.remove.show');
+Route::post('/adicionar-produtos/{id}', [StockMovementMvcController::class, 'addProduct'])->name('stock.add');
+Route::post('/baixar-produtos/{id}', [StockMovementMvcController::class, 'removeProduct'])->name('stock.remove');
