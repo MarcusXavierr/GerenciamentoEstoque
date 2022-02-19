@@ -19,8 +19,8 @@ class CreateStockMovementsTable extends Migration
             $table->unsignedBigInteger('stock_id');
             $table->boolean('is_api');
             $table->Integer('products_movemented');
-            $table->foreign('product_id')->references('SKU')->on('products');
-            $table->foreign('stock_id')->references('id')->on('stocks');
+            $table->foreign('product_id')->references('SKU')->on('products')->onDelete('cascade');
+            $table->foreign('stock_id')->references('id')->on('stocks')->onDelete('cascade');
             $table->timestamps();
         });
     }
