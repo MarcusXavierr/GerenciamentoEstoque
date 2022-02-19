@@ -1,64 +1,53 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
+# Projeto de Gerenciamento de produtos
+Esse projeto consiste em um CRUD de produtos, com uma api que tem dois endpoints, que permitem ao user autênticado adicionar produtos ao estoque, ou então dar baixa nesses produtos. Além de fazer isso pela API, o user também pode fazer esse gerenciamento de estoque dentro do próprio sistema.
 
-<p align="center">
-<a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+O setup é feito com docker, então é preciso ter o docker e docker-compose instalados na máquina.
 
-## About Laravel
+Será necessário prencher os campos do banco de dados no arquivo .env (o docker-compose precisa dessas variaveis para criar o banco de dados), e também é necessario preencher os campos USER e UID no final do .env, que são o nome do user e o ID dele.
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+O projeto usa PHP8.
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+## Setup
+Primeiro rode o comando abaixo para rodar os containers e fazer build do Dockerfile
+```docker
+docker-compose up -d
+```
+Logo depois será preciso baixar as dependencias do Laravel usando o composer
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+```docker
+docker-compose exec app composer update
+```
 
-## Learning Laravel
+Após baixar as dependencias, será preciso rodar as migrations
+```docker
+docker-compose exec app php artisan migrate
+```
+caso o container do laravel não consiga se conectar no container do mysql, espere alguns segundos e tente novamente.
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+E caso você queira popular as tabelas do banco de dados com o Seeder, rode esse comando
+```docker
+docker-compose exec app php artisan db:seed
+```
+Quando você rodar o Seeder ele irá criar um User com o email "admin@email.com" e senha "password". Use isso para fazer seu login.
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 1500 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+### Testes
+Existem 4 classes de teste na pasta tests. Uma de testes de integração do CRUD, um teste unitário de uma função desse CRUD. Uma classe que testa os endpoints de gerenciamento de estoque da API, e outra classe que testa o gerenciamento de estoque feito dentro do sistema.
 
-## Laravel Sponsors
+Para rodar os testes basta rodar o comando
+```docker
+docker-compose exec app php artisan test
+```
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
 
-### Premium Partners
+## Informações
+O phpmyadmin está rodando na porta 8000, então é possivel acessar ele pelo localhost:8000.
+O container do NGINX está rodando na porta 80, então basta acessar localhost para entrar no sistema
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[OP.GG](https://op.gg)**
-- **[WebReinvent](https://webreinvent.com/?utm_source=laravel&utm_medium=github&utm_campaign=patreon-sponsors)**
-- **[Lendio](https://lendio.com)**
+Dentro da homepage você irá ver um relatório de todas as adições e remoções de estoque que aconteceram no dia
+![](imgs/home.jpg)
 
-## Contributing
+Clicando na aba Produtos você verá uma listagem de produtos e poderá editar, remover e adicionar produtos
+![](imgs/products.jpg)
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
-
-## Code of Conduct
-
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+E clicando em Controle de Estoque você será redirecionado para uma página que te permite adicionar o estoque de um produto, ou dar baixa nesse estoque de produtos
+![](imgs/stock.jpg)
