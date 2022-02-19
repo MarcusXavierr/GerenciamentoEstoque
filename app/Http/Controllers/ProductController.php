@@ -27,7 +27,7 @@ class ProductController extends Controller
      */
     public function index()
     {
-        $products = Product::all(['id', 'SKU', 'price', 'description', 'name']);
+        $products = Product::paginate(25);
         return view('products.index', compact('products'));
     }
 
@@ -109,12 +109,12 @@ class ProductController extends Controller
     public function destroy($id)
     {
         $product = Product::findOrFail($id);
-
+        $product->stock()->delete();
         try {
             $product->delete();
         } catch (Exception) {
             notify()->error('Houve um erro no banco de dados, por favor tente mais terde novamente', 'Erro ao deletar produto');
-            return redirect()->route('product.edit', ['product' => $id]);
+            return redirect()->route('product.index');
         }
 
         notify()->success("Produto deletado com sucesso", 'Tudo ok');
