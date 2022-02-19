@@ -10,7 +10,7 @@ O projeto usa PHP8.
 ## Setup
 Primeiro rode o comando abaixo para rodar os containers e fazer build do Dockerfile
 ```docker
-docker-compose up -d
+docker-compose up --build -d
 ```
 Logo depois será preciso baixar as dependencias do Laravel usando o composer
 
