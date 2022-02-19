@@ -124,7 +124,7 @@ You can switch the language used with the tabs at the top right (or from the nav
 <pre><code class="language-yaml">http://localhost</code></pre>
 
         <h1 id="authenticating-requests">Authenticating requests</h1>
-<p>Authenticate requests to this API's endpoints by sending an <strong><code>Authorization</code></strong> header with the value <strong><code>"Bearer {YOUR_AUTH_KEY}"</code></strong>.</p>
+<p>This API is authenticated by sending an <strong><code>Authorization</code></strong> header with the value <strong><code>"Bearer {YOUR_AUTH_KEY}"</code></strong>.</p>
 <p>All authenticated endpoints are marked with a <code>requires authentication</code> badge in the documentation below.</p>
 <p>You can retrieve your token by visiting your dashboard and clicking <b>Generate API token</b>.</p>
 
@@ -190,9 +190,9 @@ access-control-allow-origin: *
     &quot;id&quot;: 1,
     &quot;name&quot;: &quot;Admin&quot;,
     &quot;email&quot;: &quot;admin@email.com&quot;,
-    &quot;email_verified_at&quot;: &quot;2022-02-19T20:14:13.000000Z&quot;,
-    &quot;created_at&quot;: &quot;2022-02-19T20:14:13.000000Z&quot;,
-    &quot;updated_at&quot;: &quot;2022-02-19T20:14:13.000000Z&quot;
+    &quot;email_verified_at&quot;: &quot;2022-02-19T23:33:48.000000Z&quot;,
+    &quot;created_at&quot;: &quot;2022-02-19T23:33:48.000000Z&quot;,
+    &quot;updated_at&quot;: &quot;2022-02-19T23:33:48.000000Z&quot;
 }</code>
  </pre>
     </span>
@@ -391,802 +391,242 @@ access-control-allow-origin: *
 <code class="language-json">[
     {
         &quot;id&quot;: 1,
-        &quot;SKU&quot;: &quot;mediocre-steel-watch88&quot;,
-        &quot;name&quot;: &quot;Mediocre Steel Watch&quot;,
-        &quot;description&quot;: &quot;Quam esse sit omnis voluptatem ipsa dolor excepturi et quisquam et quis ut voluptate eum in quod ad sed veniam facere ipsam sit dolorem optio aut deserunt provident veritatis quas culpa quibusdam esse quibusdam suscipit et quia blanditiis.&quot;,
-        &quot;price&quot;: &quot;604.30&quot;,
-        &quot;created_at&quot;: &quot;2022-02-19T20:14:13.000000Z&quot;,
-        &quot;updated_at&quot;: &quot;2022-02-19T20:14:13.000000Z&quot;,
+        &quot;SKU&quot;: &quot;enormous-leather-bottle50&quot;,
+        &quot;name&quot;: &quot;Enormous Leather Bottle&quot;,
+        &quot;description&quot;: &quot;Earum aliquid fugit corrupti et qui mollitia illo suscipit est alias odit amet omnis ut ut sunt quo reiciendis libero laboriosam deleniti est provident cupiditate rerum alias ipsam.&quot;,
+        &quot;price&quot;: &quot;121.65&quot;,
+        &quot;created_at&quot;: &quot;2022-02-19T23:33:48.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2022-02-19T23:33:48.000000Z&quot;,
         &quot;stock&quot;: {
             &quot;id&quot;: 1,
-            &quot;product_id&quot;: &quot;mediocre-steel-watch88&quot;,
-            &quot;products_in_stock&quot;: 500,
-            &quot;created_at&quot;: &quot;2022-02-19T20:14:23.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2022-02-19T20:15:27.000000Z&quot;
+            &quot;product_id&quot;: &quot;enormous-leather-bottle50&quot;,
+            &quot;products_in_stock&quot;: 100,
+            &quot;created_at&quot;: &quot;2022-02-19T23:33:50.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2022-02-19T23:33:50.000000Z&quot;
         }
     },
     {
         &quot;id&quot;: 2,
-        &quot;SKU&quot;: &quot;enormous-plastic-bottle43&quot;,
-        &quot;name&quot;: &quot;Enormous Plastic Bottle&quot;,
-        &quot;description&quot;: &quot;Ut neque accusamus aut nihil aperiam beatae non rerum hic corrupti eos nemo voluptas ea eos et et distinctio officia delectus sed et illum tenetur consequuntur adipisci iusto dolor quia est debitis vero eveniet ut qui distinctio a enim maiores quas.&quot;,
-        &quot;price&quot;: &quot;597.10&quot;,
-        &quot;created_at&quot;: &quot;2022-02-19T20:14:14.000000Z&quot;,
-        &quot;updated_at&quot;: &quot;2022-02-19T20:14:14.000000Z&quot;,
+        &quot;SKU&quot;: &quot;aerodynamic-paper-keyboard83&quot;,
+        &quot;name&quot;: &quot;Aerodynamic Paper Keyboard&quot;,
+        &quot;description&quot;: &quot;Aperiam laborum et ut tempore voluptate adipisci ducimus nemo fugit harum qui harum aut non distinctio perferendis exercitationem omnis et in nobis sunt repellendus eum dolor aspernatur et sapiente corrupti vero sit.&quot;,
+        &quot;price&quot;: &quot;399.68&quot;,
+        &quot;created_at&quot;: &quot;2022-02-19T23:33:48.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2022-02-19T23:33:48.000000Z&quot;,
         &quot;stock&quot;: {
             &quot;id&quot;: 2,
-            &quot;product_id&quot;: &quot;enormous-plastic-bottle43&quot;,
+            &quot;product_id&quot;: &quot;aerodynamic-paper-keyboard83&quot;,
             &quot;products_in_stock&quot;: 100,
-            &quot;created_at&quot;: &quot;2022-02-19T20:14:23.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2022-02-19T20:14:23.000000Z&quot;
+            &quot;created_at&quot;: &quot;2022-02-19T23:33:51.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2022-02-19T23:33:51.000000Z&quot;
         }
     },
     {
         &quot;id&quot;: 3,
-        &quot;SKU&quot;: &quot;heavy-duty-cotton-knife75&quot;,
-        &quot;name&quot;: &quot;Heavy Duty Cotton Knife&quot;,
-        &quot;description&quot;: &quot;Perferendis molestiae quo unde quo provident est aperiam nemo perferendis ut recusandae odio error ut esse eveniet sit voluptates aliquam ipsam quia delectus corporis mollitia accusamus ut rem laboriosam maxime veniam laborum et reiciendis sit sit voluptas rerum possimus vitae expedita a.&quot;,
-        &quot;price&quot;: &quot;438.93&quot;,
-        &quot;created_at&quot;: &quot;2022-02-19T20:14:14.000000Z&quot;,
-        &quot;updated_at&quot;: &quot;2022-02-19T20:14:14.000000Z&quot;,
+        &quot;SKU&quot;: &quot;incredible-steel-lamp91&quot;,
+        &quot;name&quot;: &quot;Incredible Steel Lamp&quot;,
+        &quot;description&quot;: &quot;Nisi dolor corrupti vel amet temporibus est est aut adipisci voluptatum laboriosam et voluptate ipsam necessitatibus et ab sit sed debitis voluptas autem sed voluptatem consequatur nisi tenetur facilis quasi voluptas enim itaque eaque eum omnis.&quot;,
+        &quot;price&quot;: &quot;73.60&quot;,
+        &quot;created_at&quot;: &quot;2022-02-19T23:33:48.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2022-02-19T23:33:48.000000Z&quot;,
         &quot;stock&quot;: {
             &quot;id&quot;: 3,
-            &quot;product_id&quot;: &quot;heavy-duty-cotton-knife75&quot;,
+            &quot;product_id&quot;: &quot;incredible-steel-lamp91&quot;,
             &quot;products_in_stock&quot;: 100,
-            &quot;created_at&quot;: &quot;2022-02-19T20:14:23.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2022-02-19T20:14:23.000000Z&quot;
+            &quot;created_at&quot;: &quot;2022-02-19T23:33:51.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2022-02-19T23:33:51.000000Z&quot;
         }
     },
     {
         &quot;id&quot;: 4,
-        &quot;SKU&quot;: &quot;intelligent-silk-bag25&quot;,
-        &quot;name&quot;: &quot;Intelligent Silk Bag&quot;,
-        &quot;description&quot;: &quot;Aliquid id ut qui dolore eum nihil quia id accusantium commodi aliquid voluptatem unde ut officia quaerat porro sint nostrum consequatur dolore alias reiciendis aliquid iste.&quot;,
-        &quot;price&quot;: &quot;844.06&quot;,
-        &quot;created_at&quot;: &quot;2022-02-19T20:14:14.000000Z&quot;,
-        &quot;updated_at&quot;: &quot;2022-02-19T20:14:14.000000Z&quot;,
+        &quot;SKU&quot;: &quot;awesome-bronze-shirt3&quot;,
+        &quot;name&quot;: &quot;Awesome Bronze Shirt&quot;,
+        &quot;description&quot;: &quot;Non rerum officiis aliquid repellat beatae omnis facere impedit eaque aut provident et praesentium repellendus libero quis possimus tempore quos omnis omnis voluptatem dolorem aut explicabo ipsam maxime.&quot;,
+        &quot;price&quot;: &quot;563.96&quot;,
+        &quot;created_at&quot;: &quot;2022-02-19T23:33:49.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2022-02-19T23:33:49.000000Z&quot;,
         &quot;stock&quot;: {
             &quot;id&quot;: 4,
-            &quot;product_id&quot;: &quot;intelligent-silk-bag25&quot;,
+            &quot;product_id&quot;: &quot;awesome-bronze-shirt3&quot;,
             &quot;products_in_stock&quot;: 100,
-            &quot;created_at&quot;: &quot;2022-02-19T20:14:24.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2022-02-19T20:14:24.000000Z&quot;
+            &quot;created_at&quot;: &quot;2022-02-19T23:33:51.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2022-02-19T23:33:51.000000Z&quot;
         }
     },
     {
         &quot;id&quot;: 5,
-        &quot;SKU&quot;: &quot;heavy-duty-steel-keyboard68&quot;,
-        &quot;name&quot;: &quot;Heavy Duty Steel Keyboard&quot;,
-        &quot;description&quot;: &quot;Dolorem asperiores porro doloremque in accusantium mollitia minus cumque magnam velit numquam magnam aut qui deleniti eum sint et nihil ipsam reiciendis quis quidem consequatur velit quia rerum odit non exercitationem quae officiis quis.&quot;,
-        &quot;price&quot;: &quot;715.68&quot;,
-        &quot;created_at&quot;: &quot;2022-02-19T20:14:14.000000Z&quot;,
-        &quot;updated_at&quot;: &quot;2022-02-19T20:14:14.000000Z&quot;,
+        &quot;SKU&quot;: &quot;fantastic-paper-chair89&quot;,
+        &quot;name&quot;: &quot;Fantastic Paper Chair&quot;,
+        &quot;description&quot;: &quot;Dolor aut delectus vitae iste unde est inventore dignissimos ipsam corrupti cumque sint aspernatur tempore ut veniam est ut quis eaque porro dolore eum dolor expedita molestias tempore et dolores necessitatibus sunt et consequatur nemo aliquam labore corrupti quae quod.&quot;,
+        &quot;price&quot;: &quot;970.41&quot;,
+        &quot;created_at&quot;: &quot;2022-02-19T23:33:49.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2022-02-19T23:33:49.000000Z&quot;,
         &quot;stock&quot;: {
             &quot;id&quot;: 5,
-            &quot;product_id&quot;: &quot;heavy-duty-steel-keyboard68&quot;,
+            &quot;product_id&quot;: &quot;fantastic-paper-chair89&quot;,
             &quot;products_in_stock&quot;: 100,
-            &quot;created_at&quot;: &quot;2022-02-19T20:14:25.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2022-02-19T20:14:25.000000Z&quot;
+            &quot;created_at&quot;: &quot;2022-02-19T23:33:51.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2022-02-19T23:33:51.000000Z&quot;
         }
     },
     {
         &quot;id&quot;: 6,
-        &quot;SKU&quot;: &quot;sleek-linen-computer100&quot;,
-        &quot;name&quot;: &quot;Sleek Linen Computer&quot;,
-        &quot;description&quot;: &quot;Porro aliquid ab voluptates debitis nisi rem qui quod voluptates in et dolor saepe ea voluptatem vel amet et consequatur natus et neque aut numquam nemo excepturi maiores eum ab rem ea earum.&quot;,
-        &quot;price&quot;: &quot;502.32&quot;,
-        &quot;created_at&quot;: &quot;2022-02-19T20:14:15.000000Z&quot;,
-        &quot;updated_at&quot;: &quot;2022-02-19T20:14:15.000000Z&quot;,
+        &quot;SKU&quot;: &quot;mediocre-granite-chair3&quot;,
+        &quot;name&quot;: &quot;Mediocre Granite Chair&quot;,
+        &quot;description&quot;: &quot;Doloremque ex qui et et dolor est omnis consequatur odit eum unde rerum voluptatem dolorum et ipsa repellat est maxime et officiis culpa sed harum cupiditate aut nihil autem ea quaerat alias quo ut officia rerum rerum nam odit reprehenderit.&quot;,
+        &quot;price&quot;: &quot;79.36&quot;,
+        &quot;created_at&quot;: &quot;2022-02-19T23:33:49.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2022-02-19T23:33:49.000000Z&quot;,
         &quot;stock&quot;: {
             &quot;id&quot;: 6,
-            &quot;product_id&quot;: &quot;sleek-linen-computer100&quot;,
+            &quot;product_id&quot;: &quot;mediocre-granite-chair3&quot;,
             &quot;products_in_stock&quot;: 100,
-            &quot;created_at&quot;: &quot;2022-02-19T20:14:25.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2022-02-19T20:14:25.000000Z&quot;
+            &quot;created_at&quot;: &quot;2022-02-19T23:33:51.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2022-02-19T23:33:51.000000Z&quot;
         }
     },
     {
         &quot;id&quot;: 7,
-        &quot;SKU&quot;: &quot;mediocre-copper-lamp82&quot;,
-        &quot;name&quot;: &quot;Mediocre Copper Lamp&quot;,
-        &quot;description&quot;: &quot;Itaque et optio fugit vel aut perspiciatis dolores molestiae delectus deleniti eos libero laboriosam et reiciendis saepe non cupiditate suscipit ipsam distinctio recusandae possimus iure quo est sapiente suscipit.&quot;,
-        &quot;price&quot;: &quot;181.27&quot;,
-        &quot;created_at&quot;: &quot;2022-02-19T20:14:15.000000Z&quot;,
-        &quot;updated_at&quot;: &quot;2022-02-19T20:14:15.000000Z&quot;,
+        &quot;SKU&quot;: &quot;ergonomic-aluminum-plate6&quot;,
+        &quot;name&quot;: &quot;Ergonomic Aluminum Plate&quot;,
+        &quot;description&quot;: &quot;Nobis sequi quia quisquam rerum iusto ut vel aut sit velit asperiores est labore maiores corporis fugit architecto aut velit sed ullam consequuntur sint incidunt velit voluptas sunt amet est eum alias dolorum.&quot;,
+        &quot;price&quot;: &quot;513.33&quot;,
+        &quot;created_at&quot;: &quot;2022-02-19T23:33:49.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2022-02-19T23:33:49.000000Z&quot;,
         &quot;stock&quot;: {
             &quot;id&quot;: 7,
-            &quot;product_id&quot;: &quot;mediocre-copper-lamp82&quot;,
+            &quot;product_id&quot;: &quot;ergonomic-aluminum-plate6&quot;,
             &quot;products_in_stock&quot;: 100,
-            &quot;created_at&quot;: &quot;2022-02-19T20:14:25.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2022-02-19T20:14:25.000000Z&quot;
+            &quot;created_at&quot;: &quot;2022-02-19T23:33:51.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2022-02-19T23:33:51.000000Z&quot;
         }
     },
     {
         &quot;id&quot;: 8,
-        &quot;SKU&quot;: &quot;fantastic-iron-shoes42&quot;,
-        &quot;name&quot;: &quot;Fantastic Iron Shoes&quot;,
-        &quot;description&quot;: &quot;Omnis accusantium sint tenetur est quo atque saepe in ea natus non deleniti aut in fugiat debitis ea quis qui et assumenda deserunt sint corporis nesciunt a quos aut ex suscipit quisquam voluptatum quo enim ea est modi quis eos laborum debitis.&quot;,
-        &quot;price&quot;: &quot;474.89&quot;,
-        &quot;created_at&quot;: &quot;2022-02-19T20:14:15.000000Z&quot;,
-        &quot;updated_at&quot;: &quot;2022-02-19T20:14:15.000000Z&quot;,
+        &quot;SKU&quot;: &quot;mediocre-rubber-shoes17&quot;,
+        &quot;name&quot;: &quot;Mediocre Rubber Shoes&quot;,
+        &quot;description&quot;: &quot;Quidem fugit est totam laudantium omnis sed dolorem aut hic adipisci illum fugiat dicta ratione a quisquam molestiae aspernatur animi harum sapiente.&quot;,
+        &quot;price&quot;: &quot;357.78&quot;,
+        &quot;created_at&quot;: &quot;2022-02-19T23:33:49.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2022-02-19T23:33:49.000000Z&quot;,
         &quot;stock&quot;: {
             &quot;id&quot;: 8,
-            &quot;product_id&quot;: &quot;fantastic-iron-shoes42&quot;,
+            &quot;product_id&quot;: &quot;mediocre-rubber-shoes17&quot;,
             &quot;products_in_stock&quot;: 100,
-            &quot;created_at&quot;: &quot;2022-02-19T20:14:25.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2022-02-19T20:14:25.000000Z&quot;
+            &quot;created_at&quot;: &quot;2022-02-19T23:33:51.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2022-02-19T23:33:51.000000Z&quot;
         }
     },
     {
         &quot;id&quot;: 9,
-        &quot;SKU&quot;: &quot;awesome-concrete-bottle83&quot;,
-        &quot;name&quot;: &quot;Awesome Concrete Bottle&quot;,
-        &quot;description&quot;: &quot;Nulla cum architecto molestiae doloribus nobis doloremque harum quod laudantium rem minima tempore repudiandae voluptatem delectus est et quam nostrum incidunt reprehenderit ipsum quod perferendis sequi hic dolorem ut cum unde molestiae beatae voluptas dolorem rerum et cumque qui.&quot;,
-        &quot;price&quot;: &quot;189.86&quot;,
-        &quot;created_at&quot;: &quot;2022-02-19T20:14:15.000000Z&quot;,
-        &quot;updated_at&quot;: &quot;2022-02-19T20:14:15.000000Z&quot;,
+        &quot;SKU&quot;: &quot;sleek-leather-bag26&quot;,
+        &quot;name&quot;: &quot;Sleek Leather Bag&quot;,
+        &quot;description&quot;: &quot;Maxime cumque necessitatibus ea impedit facere rerum cupiditate tenetur ullam qui quis sunt eum inventore dolorem sint magnam libero voluptas quos omnis mollitia qui et dolore ducimus corrupti mollitia.&quot;,
+        &quot;price&quot;: &quot;954.72&quot;,
+        &quot;created_at&quot;: &quot;2022-02-19T23:33:49.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2022-02-19T23:33:49.000000Z&quot;,
         &quot;stock&quot;: {
             &quot;id&quot;: 9,
-            &quot;product_id&quot;: &quot;awesome-concrete-bottle83&quot;,
+            &quot;product_id&quot;: &quot;sleek-leather-bag26&quot;,
             &quot;products_in_stock&quot;: 100,
-            &quot;created_at&quot;: &quot;2022-02-19T20:14:25.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2022-02-19T20:14:25.000000Z&quot;
+            &quot;created_at&quot;: &quot;2022-02-19T23:33:51.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2022-02-19T23:33:51.000000Z&quot;
         }
     },
     {
         &quot;id&quot;: 10,
-        &quot;SKU&quot;: &quot;mediocre-copper-car12&quot;,
-        &quot;name&quot;: &quot;Mediocre Copper Car&quot;,
-        &quot;description&quot;: &quot;Qui voluptatem officiis magni voluptatibus consectetur fuga iusto dolor cum aliquam aut et in vero nesciunt eos amet aut praesentium cupiditate quae in debitis sit omnis repellendus in quo excepturi qui doloremque repudiandae tempora labore incidunt.&quot;,
-        &quot;price&quot;: &quot;994.51&quot;,
-        &quot;created_at&quot;: &quot;2022-02-19T20:14:15.000000Z&quot;,
-        &quot;updated_at&quot;: &quot;2022-02-19T20:14:15.000000Z&quot;,
+        &quot;SKU&quot;: &quot;fantastic-iron-watch26&quot;,
+        &quot;name&quot;: &quot;Fantastic Iron Watch&quot;,
+        &quot;description&quot;: &quot;Facere pariatur tempore doloremque sit nihil molestiae repellat nihil vero aut atque voluptas est et nihil vitae tempore sit adipisci architecto aut dignissimos est dolorem eius vel rerum deleniti et quis excepturi rerum non debitis tempora maxime pariatur magnam.&quot;,
+        &quot;price&quot;: &quot;92.18&quot;,
+        &quot;created_at&quot;: &quot;2022-02-19T23:33:50.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2022-02-19T23:33:50.000000Z&quot;,
         &quot;stock&quot;: {
             &quot;id&quot;: 10,
-            &quot;product_id&quot;: &quot;mediocre-copper-car12&quot;,
+            &quot;product_id&quot;: &quot;fantastic-iron-watch26&quot;,
             &quot;products_in_stock&quot;: 100,
-            &quot;created_at&quot;: &quot;2022-02-19T20:14:26.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2022-02-19T20:14:26.000000Z&quot;
+            &quot;created_at&quot;: &quot;2022-02-19T23:33:52.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2022-02-19T23:33:52.000000Z&quot;
         }
     },
     {
         &quot;id&quot;: 11,
-        &quot;SKU&quot;: &quot;mediocre-leather-shoes94&quot;,
-        &quot;name&quot;: &quot;Mediocre Leather Shoes&quot;,
-        &quot;description&quot;: &quot;Quis maiores aut ipsa vel molestiae tempora hic dolore praesentium velit autem suscipit qui laborum eligendi quia est exercitationem odit et possimus provident voluptates placeat aspernatur delectus reiciendis deserunt ut amet nobis qui et.&quot;,
-        &quot;price&quot;: &quot;248.56&quot;,
-        &quot;created_at&quot;: &quot;2022-02-19T20:14:15.000000Z&quot;,
-        &quot;updated_at&quot;: &quot;2022-02-19T20:14:15.000000Z&quot;,
+        &quot;SKU&quot;: &quot;heavy-duty-cotton-knife23&quot;,
+        &quot;name&quot;: &quot;Heavy Duty Cotton Knife&quot;,
+        &quot;description&quot;: &quot;Quasi ducimus molestiae officia nostrum quibusdam vero ea est id optio provident illum a consequatur sit rerum molestiae quae eos veniam quisquam magnam.&quot;,
+        &quot;price&quot;: &quot;595.32&quot;,
+        &quot;created_at&quot;: &quot;2022-02-19T23:33:50.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2022-02-19T23:33:50.000000Z&quot;,
         &quot;stock&quot;: {
             &quot;id&quot;: 11,
-            &quot;product_id&quot;: &quot;mediocre-leather-shoes94&quot;,
+            &quot;product_id&quot;: &quot;heavy-duty-cotton-knife23&quot;,
             &quot;products_in_stock&quot;: 100,
-            &quot;created_at&quot;: &quot;2022-02-19T20:14:26.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2022-02-19T20:14:26.000000Z&quot;
+            &quot;created_at&quot;: &quot;2022-02-19T23:33:52.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2022-02-19T23:33:52.000000Z&quot;
         }
     },
     {
         &quot;id&quot;: 12,
-        &quot;SKU&quot;: &quot;enormous-linen-hat98&quot;,
-        &quot;name&quot;: &quot;Enormous Linen Hat&quot;,
-        &quot;description&quot;: &quot;Facere corrupti atque asperiores corporis libero qui in atque nostrum odio temporibus odio debitis incidunt in numquam id mollitia distinctio sed sed molestias sit quo ducimus optio voluptatem nesciunt ex adipisci quo.&quot;,
-        &quot;price&quot;: &quot;85.45&quot;,
-        &quot;created_at&quot;: &quot;2022-02-19T20:14:16.000000Z&quot;,
-        &quot;updated_at&quot;: &quot;2022-02-19T20:14:16.000000Z&quot;,
+        &quot;SKU&quot;: &quot;awesome-steel-gloves67&quot;,
+        &quot;name&quot;: &quot;Awesome Steel Gloves&quot;,
+        &quot;description&quot;: &quot;Et aut qui qui ad debitis rerum officiis sit non quibusdam error ut harum id quisquam eum veritatis minima sit nihil suscipit laborum inventore neque commodi tempora odit id.&quot;,
+        &quot;price&quot;: &quot;955.82&quot;,
+        &quot;created_at&quot;: &quot;2022-02-19T23:33:50.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2022-02-19T23:33:50.000000Z&quot;,
         &quot;stock&quot;: {
             &quot;id&quot;: 12,
-            &quot;product_id&quot;: &quot;enormous-linen-hat98&quot;,
+            &quot;product_id&quot;: &quot;awesome-steel-gloves67&quot;,
             &quot;products_in_stock&quot;: 100,
-            &quot;created_at&quot;: &quot;2022-02-19T20:14:26.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2022-02-19T20:14:26.000000Z&quot;
+            &quot;created_at&quot;: &quot;2022-02-19T23:33:52.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2022-02-19T23:33:52.000000Z&quot;
         }
     },
     {
         &quot;id&quot;: 13,
-        &quot;SKU&quot;: &quot;ergonomic-leather-plate9&quot;,
-        &quot;name&quot;: &quot;Ergonomic Leather Plate&quot;,
-        &quot;description&quot;: &quot;Omnis praesentium quam minus harum delectus minus id tempora provident et autem odio aspernatur vel quis commodi eos ut molestiae dolore dolorum et perspiciatis ad minima omnis ad voluptas odio occaecati quia cumque dolorem.&quot;,
-        &quot;price&quot;: &quot;707.81&quot;,
-        &quot;created_at&quot;: &quot;2022-02-19T20:14:16.000000Z&quot;,
-        &quot;updated_at&quot;: &quot;2022-02-19T20:14:16.000000Z&quot;,
+        &quot;SKU&quot;: &quot;ergonomic-iron-hat68&quot;,
+        &quot;name&quot;: &quot;Ergonomic Iron Hat&quot;,
+        &quot;description&quot;: &quot;Cupiditate placeat officiis aut doloremque est quia tempore dolor ut consequatur dolores laboriosam possimus nesciunt sit officia sed tempore et et rerum inventore adipisci et et excepturi dolores eum debitis ipsam cumque minus in enim omnis ut cupiditate dicta recusandae accusamus.&quot;,
+        &quot;price&quot;: &quot;577.47&quot;,
+        &quot;created_at&quot;: &quot;2022-02-19T23:33:50.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2022-02-19T23:33:50.000000Z&quot;,
         &quot;stock&quot;: {
             &quot;id&quot;: 13,
-            &quot;product_id&quot;: &quot;ergonomic-leather-plate9&quot;,
+            &quot;product_id&quot;: &quot;ergonomic-iron-hat68&quot;,
             &quot;products_in_stock&quot;: 100,
-            &quot;created_at&quot;: &quot;2022-02-19T20:14:26.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2022-02-19T20:14:26.000000Z&quot;
+            &quot;created_at&quot;: &quot;2022-02-19T23:33:52.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2022-02-19T23:33:52.000000Z&quot;
         }
     },
     {
         &quot;id&quot;: 14,
-        &quot;SKU&quot;: &quot;ergonomic-bronze-computer46&quot;,
-        &quot;name&quot;: &quot;Ergonomic Bronze Computer&quot;,
-        &quot;description&quot;: &quot;Incidunt aut aut ullam facere et laudantium illum quod qui ratione voluptatibus aliquid accusantium in aspernatur dolorem quia non sapiente illo et quod laborum unde iste ea id et ipsa iure eaque expedita aut porro omnis nulla ipsa adipisci quo at.&quot;,
-        &quot;price&quot;: &quot;477.59&quot;,
-        &quot;created_at&quot;: &quot;2022-02-19T20:14:16.000000Z&quot;,
-        &quot;updated_at&quot;: &quot;2022-02-19T20:14:16.000000Z&quot;,
+        &quot;SKU&quot;: &quot;aerodynamic-cotton-computer26&quot;,
+        &quot;name&quot;: &quot;Aerodynamic Cotton Computer&quot;,
+        &quot;description&quot;: &quot;Voluptate debitis quisquam voluptatibus quia voluptatem quae veniam quis deleniti repellat necessitatibus aperiam doloremque in aut explicabo autem molestiae in id est aliquid qui perferendis corrupti repellendus autem porro consequatur enim nobis voluptatem voluptas facilis voluptatem facere quia possimus nam dolorem.&quot;,
+        &quot;price&quot;: &quot;263.46&quot;,
+        &quot;created_at&quot;: &quot;2022-02-19T23:33:50.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2022-02-19T23:33:50.000000Z&quot;,
         &quot;stock&quot;: {
             &quot;id&quot;: 14,
-            &quot;product_id&quot;: &quot;ergonomic-bronze-computer46&quot;,
+            &quot;product_id&quot;: &quot;aerodynamic-cotton-computer26&quot;,
             &quot;products_in_stock&quot;: 100,
-            &quot;created_at&quot;: &quot;2022-02-19T20:14:27.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2022-02-19T20:14:27.000000Z&quot;
+            &quot;created_at&quot;: &quot;2022-02-19T23:33:52.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2022-02-19T23:33:52.000000Z&quot;
         }
     },
     {
         &quot;id&quot;: 15,
-        &quot;SKU&quot;: &quot;sleek-cotton-clock67&quot;,
-        &quot;name&quot;: &quot;Sleek Cotton Clock&quot;,
-        &quot;description&quot;: &quot;Accusantium architecto eos qui id necessitatibus hic eum labore officia odit facilis dolorem blanditiis amet debitis aut officia quia ad at sed placeat et non eos id vero rerum blanditiis facilis sint nostrum.&quot;,
-        &quot;price&quot;: &quot;181.69&quot;,
-        &quot;created_at&quot;: &quot;2022-02-19T20:14:16.000000Z&quot;,
-        &quot;updated_at&quot;: &quot;2022-02-19T20:14:16.000000Z&quot;,
+        &quot;SKU&quot;: &quot;intelligent-wool-lamp64&quot;,
+        &quot;name&quot;: &quot;Intelligent Wool Lamp&quot;,
+        &quot;description&quot;: &quot;Distinctio corporis fuga debitis ut aliquid maiores excepturi qui quidem architecto nisi consequatur eos nemo doloremque minus cumque qui totam dolore minus.&quot;,
+        &quot;price&quot;: &quot;593.74&quot;,
+        &quot;created_at&quot;: &quot;2022-02-19T23:33:50.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2022-02-19T23:33:50.000000Z&quot;,
         &quot;stock&quot;: {
             &quot;id&quot;: 15,
-            &quot;product_id&quot;: &quot;sleek-cotton-clock67&quot;,
+            &quot;product_id&quot;: &quot;intelligent-wool-lamp64&quot;,
             &quot;products_in_stock&quot;: 100,
-            &quot;created_at&quot;: &quot;2022-02-19T20:14:27.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2022-02-19T20:14:27.000000Z&quot;
-        }
-    },
-    {
-        &quot;id&quot;: 16,
-        &quot;SKU&quot;: &quot;aerodynamic-steel-chair85&quot;,
-        &quot;name&quot;: &quot;Aerodynamic Steel Chair&quot;,
-        &quot;description&quot;: &quot;Sit enim voluptatem sunt sint et esse ipsa sit tempora dicta quasi fugiat ea nesciunt repellat vel commodi officiis sapiente ratione vel autem accusamus nemo placeat.&quot;,
-        &quot;price&quot;: &quot;315.86&quot;,
-        &quot;created_at&quot;: &quot;2022-02-19T20:14:17.000000Z&quot;,
-        &quot;updated_at&quot;: &quot;2022-02-19T20:14:17.000000Z&quot;,
-        &quot;stock&quot;: {
-            &quot;id&quot;: 16,
-            &quot;product_id&quot;: &quot;aerodynamic-steel-chair85&quot;,
-            &quot;products_in_stock&quot;: 100,
-            &quot;created_at&quot;: &quot;2022-02-19T20:14:27.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2022-02-19T20:14:27.000000Z&quot;
-        }
-    },
-    {
-        &quot;id&quot;: 17,
-        &quot;SKU&quot;: &quot;incredible-steel-computer42&quot;,
-        &quot;name&quot;: &quot;Incredible Steel Computer&quot;,
-        &quot;description&quot;: &quot;Eos quidem molestias omnis ex qui blanditiis atque est non beatae est quis et ut inventore accusamus officia sunt corporis consequatur quia quod placeat ut quaerat id est molestiae id.&quot;,
-        &quot;price&quot;: &quot;326.75&quot;,
-        &quot;created_at&quot;: &quot;2022-02-19T20:14:17.000000Z&quot;,
-        &quot;updated_at&quot;: &quot;2022-02-19T20:14:17.000000Z&quot;,
-        &quot;stock&quot;: {
-            &quot;id&quot;: 17,
-            &quot;product_id&quot;: &quot;incredible-steel-computer42&quot;,
-            &quot;products_in_stock&quot;: 100,
-            &quot;created_at&quot;: &quot;2022-02-19T20:14:27.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2022-02-19T20:14:27.000000Z&quot;
-        }
-    },
-    {
-        &quot;id&quot;: 18,
-        &quot;SKU&quot;: &quot;enormous-concrete-shoes66&quot;,
-        &quot;name&quot;: &quot;Enormous Concrete Shoes&quot;,
-        &quot;description&quot;: &quot;Eveniet nam hic distinctio est labore et ut voluptatibus suscipit et incidunt fugiat quibusdam quia dolorum reiciendis corporis quas culpa repellendus vitae iusto illum et id cum qui possimus hic et accusantium voluptatibus sed tempore et.&quot;,
-        &quot;price&quot;: &quot;373.43&quot;,
-        &quot;created_at&quot;: &quot;2022-02-19T20:14:17.000000Z&quot;,
-        &quot;updated_at&quot;: &quot;2022-02-19T20:14:17.000000Z&quot;,
-        &quot;stock&quot;: {
-            &quot;id&quot;: 18,
-            &quot;product_id&quot;: &quot;enormous-concrete-shoes66&quot;,
-            &quot;products_in_stock&quot;: 100,
-            &quot;created_at&quot;: &quot;2022-02-19T20:14:28.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2022-02-19T20:14:28.000000Z&quot;
-        }
-    },
-    {
-        &quot;id&quot;: 19,
-        &quot;SKU&quot;: &quot;synergistic-leather-pants89&quot;,
-        &quot;name&quot;: &quot;Synergistic Leather Pants&quot;,
-        &quot;description&quot;: &quot;Officia distinctio est quia amet dolor aliquam odit fugiat occaecati aut deserunt nulla illum at nostrum dolor quis quod quidem saepe enim accusantium praesentium deserunt aut voluptatem.&quot;,
-        &quot;price&quot;: &quot;946.16&quot;,
-        &quot;created_at&quot;: &quot;2022-02-19T20:14:17.000000Z&quot;,
-        &quot;updated_at&quot;: &quot;2022-02-19T20:14:17.000000Z&quot;,
-        &quot;stock&quot;: {
-            &quot;id&quot;: 19,
-            &quot;product_id&quot;: &quot;synergistic-leather-pants89&quot;,
-            &quot;products_in_stock&quot;: 100,
-            &quot;created_at&quot;: &quot;2022-02-19T20:14:28.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2022-02-19T20:14:28.000000Z&quot;
-        }
-    },
-    {
-        &quot;id&quot;: 20,
-        &quot;SKU&quot;: &quot;gorgeous-silk-keyboard47&quot;,
-        &quot;name&quot;: &quot;Gorgeous Silk Keyboard&quot;,
-        &quot;description&quot;: &quot;Hic totam quisquam sed tenetur blanditiis occaecati totam voluptas incidunt eveniet cum animi sunt et quaerat voluptatem rerum sunt dolores voluptate asperiores est facilis repellat qui rem voluptatum consequuntur beatae sint qui voluptas nemo provident omnis quas non velit dolorum.&quot;,
-        &quot;price&quot;: &quot;364.79&quot;,
-        &quot;created_at&quot;: &quot;2022-02-19T20:14:17.000000Z&quot;,
-        &quot;updated_at&quot;: &quot;2022-02-19T20:14:17.000000Z&quot;,
-        &quot;stock&quot;: {
-            &quot;id&quot;: 20,
-            &quot;product_id&quot;: &quot;gorgeous-silk-keyboard47&quot;,
-            &quot;products_in_stock&quot;: 100,
-            &quot;created_at&quot;: &quot;2022-02-19T20:14:28.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2022-02-19T20:14:28.000000Z&quot;
-        }
-    },
-    {
-        &quot;id&quot;: 21,
-        &quot;SKU&quot;: &quot;fantastic-granite-bottle7&quot;,
-        &quot;name&quot;: &quot;Fantastic Granite Bottle&quot;,
-        &quot;description&quot;: &quot;Minus dolor libero voluptas dolore similique ea cupiditate corporis autem natus repudiandae itaque minima vitae necessitatibus vel architecto quis saepe iste magni eius et adipisci eligendi reprehenderit consectetur hic error.&quot;,
-        &quot;price&quot;: &quot;103.39&quot;,
-        &quot;created_at&quot;: &quot;2022-02-19T20:14:18.000000Z&quot;,
-        &quot;updated_at&quot;: &quot;2022-02-19T20:14:18.000000Z&quot;,
-        &quot;stock&quot;: {
-            &quot;id&quot;: 21,
-            &quot;product_id&quot;: &quot;fantastic-granite-bottle7&quot;,
-            &quot;products_in_stock&quot;: 100,
-            &quot;created_at&quot;: &quot;2022-02-19T20:14:28.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2022-02-19T20:14:28.000000Z&quot;
-        }
-    },
-    {
-        &quot;id&quot;: 22,
-        &quot;SKU&quot;: &quot;durable-marble-chair51&quot;,
-        &quot;name&quot;: &quot;Durable Marble Chair&quot;,
-        &quot;description&quot;: &quot;Et non porro placeat magnam nam ut et quo quam est est dolorem quis facere labore maxime iure assumenda quia.&quot;,
-        &quot;price&quot;: &quot;299.15&quot;,
-        &quot;created_at&quot;: &quot;2022-02-19T20:14:18.000000Z&quot;,
-        &quot;updated_at&quot;: &quot;2022-02-19T20:14:18.000000Z&quot;,
-        &quot;stock&quot;: {
-            &quot;id&quot;: 22,
-            &quot;product_id&quot;: &quot;durable-marble-chair51&quot;,
-            &quot;products_in_stock&quot;: 100,
-            &quot;created_at&quot;: &quot;2022-02-19T20:14:29.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2022-02-19T20:14:29.000000Z&quot;
-        }
-    },
-    {
-        &quot;id&quot;: 23,
-        &quot;SKU&quot;: &quot;durable-wooden-computer86&quot;,
-        &quot;name&quot;: &quot;Durable Wooden Computer&quot;,
-        &quot;description&quot;: &quot;Voluptate quos officia fugit aspernatur eos animi ea ipsam et est maiores et aut aut natus magni velit et quibusdam voluptatum animi.&quot;,
-        &quot;price&quot;: &quot;949.47&quot;,
-        &quot;created_at&quot;: &quot;2022-02-19T20:14:18.000000Z&quot;,
-        &quot;updated_at&quot;: &quot;2022-02-19T20:14:18.000000Z&quot;,
-        &quot;stock&quot;: {
-            &quot;id&quot;: 23,
-            &quot;product_id&quot;: &quot;durable-wooden-computer86&quot;,
-            &quot;products_in_stock&quot;: 100,
-            &quot;created_at&quot;: &quot;2022-02-19T20:14:29.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2022-02-19T20:14:29.000000Z&quot;
-        }
-    },
-    {
-        &quot;id&quot;: 24,
-        &quot;SKU&quot;: &quot;durable-iron-shoes50&quot;,
-        &quot;name&quot;: &quot;Durable Iron Shoes&quot;,
-        &quot;description&quot;: &quot;Eveniet qui ipsam harum velit expedita molestias temporibus dolorum repudiandae rerum aspernatur omnis inventore nam distinctio quo est voluptatem et et incidunt autem nam in facilis quaerat.&quot;,
-        &quot;price&quot;: &quot;758.65&quot;,
-        &quot;created_at&quot;: &quot;2022-02-19T20:14:18.000000Z&quot;,
-        &quot;updated_at&quot;: &quot;2022-02-19T20:14:18.000000Z&quot;,
-        &quot;stock&quot;: {
-            &quot;id&quot;: 24,
-            &quot;product_id&quot;: &quot;durable-iron-shoes50&quot;,
-            &quot;products_in_stock&quot;: 100,
-            &quot;created_at&quot;: &quot;2022-02-19T20:14:29.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2022-02-19T20:14:29.000000Z&quot;
-        }
-    },
-    {
-        &quot;id&quot;: 25,
-        &quot;SKU&quot;: &quot;mediocre-granite-bag9&quot;,
-        &quot;name&quot;: &quot;Mediocre Granite Bag&quot;,
-        &quot;description&quot;: &quot;Nobis minima eum cum dolore numquam non praesentium praesentium et non quos eligendi minima est nisi corporis id assumenda dolorem harum quam dolore nulla eaque et inventore quidem dolor nisi magnam similique et distinctio.&quot;,
-        &quot;price&quot;: &quot;364.38&quot;,
-        &quot;created_at&quot;: &quot;2022-02-19T20:14:18.000000Z&quot;,
-        &quot;updated_at&quot;: &quot;2022-02-19T20:14:18.000000Z&quot;,
-        &quot;stock&quot;: {
-            &quot;id&quot;: 25,
-            &quot;product_id&quot;: &quot;mediocre-granite-bag9&quot;,
-            &quot;products_in_stock&quot;: 100,
-            &quot;created_at&quot;: &quot;2022-02-19T20:14:29.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2022-02-19T20:14:29.000000Z&quot;
-        }
-    },
-    {
-        &quot;id&quot;: 26,
-        &quot;SKU&quot;: &quot;aerodynamic-wooden-clock30&quot;,
-        &quot;name&quot;: &quot;Aerodynamic Wooden Clock&quot;,
-        &quot;description&quot;: &quot;Qui molestias voluptas facilis illo ut exercitationem aliquam aut veniam temporibus nisi nemo quo atque sed sed consequatur error distinctio aut voluptas.&quot;,
-        &quot;price&quot;: &quot;916.41&quot;,
-        &quot;created_at&quot;: &quot;2022-02-19T20:14:18.000000Z&quot;,
-        &quot;updated_at&quot;: &quot;2022-02-19T20:14:18.000000Z&quot;,
-        &quot;stock&quot;: {
-            &quot;id&quot;: 26,
-            &quot;product_id&quot;: &quot;aerodynamic-wooden-clock30&quot;,
-            &quot;products_in_stock&quot;: 100,
-            &quot;created_at&quot;: &quot;2022-02-19T20:14:29.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2022-02-19T20:14:29.000000Z&quot;
-        }
-    },
-    {
-        &quot;id&quot;: 27,
-        &quot;SKU&quot;: &quot;ergonomic-cotton-table66&quot;,
-        &quot;name&quot;: &quot;Ergonomic Cotton Table&quot;,
-        &quot;description&quot;: &quot;Quas reprehenderit labore sed a sequi et qui ipsa non perferendis dolor non omnis totam eum perferendis incidunt vel officia nihil quia non hic qui facere.&quot;,
-        &quot;price&quot;: &quot;467.41&quot;,
-        &quot;created_at&quot;: &quot;2022-02-19T20:14:19.000000Z&quot;,
-        &quot;updated_at&quot;: &quot;2022-02-19T20:14:19.000000Z&quot;,
-        &quot;stock&quot;: {
-            &quot;id&quot;: 27,
-            &quot;product_id&quot;: &quot;ergonomic-cotton-table66&quot;,
-            &quot;products_in_stock&quot;: 100,
-            &quot;created_at&quot;: &quot;2022-02-19T20:14:29.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2022-02-19T20:14:29.000000Z&quot;
-        }
-    },
-    {
-        &quot;id&quot;: 28,
-        &quot;SKU&quot;: &quot;sleek-leather-bag15&quot;,
-        &quot;name&quot;: &quot;Sleek Leather Bag&quot;,
-        &quot;description&quot;: &quot;Fugiat consequatur corporis quo aliquam voluptatem neque ut explicabo nihil quaerat magni commodi molestias et et qui a excepturi doloremque ipsam dolores.&quot;,
-        &quot;price&quot;: &quot;791.73&quot;,
-        &quot;created_at&quot;: &quot;2022-02-19T20:14:19.000000Z&quot;,
-        &quot;updated_at&quot;: &quot;2022-02-19T20:14:19.000000Z&quot;,
-        &quot;stock&quot;: {
-            &quot;id&quot;: 28,
-            &quot;product_id&quot;: &quot;sleek-leather-bag15&quot;,
-            &quot;products_in_stock&quot;: 100,
-            &quot;created_at&quot;: &quot;2022-02-19T20:14:30.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2022-02-19T20:14:30.000000Z&quot;
-        }
-    },
-    {
-        &quot;id&quot;: 29,
-        &quot;SKU&quot;: &quot;awesome-copper-clock13&quot;,
-        &quot;name&quot;: &quot;Awesome Copper Clock&quot;,
-        &quot;description&quot;: &quot;Quis est id molestiae sunt ex expedita autem unde sed aut non veniam dolorum voluptatibus commodi maiores et id rem et autem eum saepe ducimus facere unde sunt molestiae sit aliquid beatae commodi sunt facilis ea autem iste nisi vel.&quot;,
-        &quot;price&quot;: &quot;902.76&quot;,
-        &quot;created_at&quot;: &quot;2022-02-19T20:14:19.000000Z&quot;,
-        &quot;updated_at&quot;: &quot;2022-02-19T20:14:19.000000Z&quot;,
-        &quot;stock&quot;: {
-            &quot;id&quot;: 29,
-            &quot;product_id&quot;: &quot;awesome-copper-clock13&quot;,
-            &quot;products_in_stock&quot;: 100,
-            &quot;created_at&quot;: &quot;2022-02-19T20:14:30.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2022-02-19T20:14:30.000000Z&quot;
-        }
-    },
-    {
-        &quot;id&quot;: 30,
-        &quot;SKU&quot;: &quot;aerodynamic-silk-gloves77&quot;,
-        &quot;name&quot;: &quot;Aerodynamic Silk Gloves&quot;,
-        &quot;description&quot;: &quot;Illo nobis minus nihil itaque natus cumque cumque et impedit debitis eligendi minus ipsum nihil non voluptas quas eveniet quo ipsum ipsa sequi rem explicabo qui at non praesentium velit vero ratione odit quidem sequi deserunt quia fugiat commodi inventore.&quot;,
-        &quot;price&quot;: &quot;454.74&quot;,
-        &quot;created_at&quot;: &quot;2022-02-19T20:14:19.000000Z&quot;,
-        &quot;updated_at&quot;: &quot;2022-02-19T20:14:19.000000Z&quot;,
-        &quot;stock&quot;: {
-            &quot;id&quot;: 30,
-            &quot;product_id&quot;: &quot;aerodynamic-silk-gloves77&quot;,
-            &quot;products_in_stock&quot;: 100,
-            &quot;created_at&quot;: &quot;2022-02-19T20:14:30.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2022-02-19T20:14:30.000000Z&quot;
-        }
-    },
-    {
-        &quot;id&quot;: 31,
-        &quot;SKU&quot;: &quot;small-copper-watch19&quot;,
-        &quot;name&quot;: &quot;Small Copper Watch&quot;,
-        &quot;description&quot;: &quot;Repellat quae voluptatum consequuntur dolorem qui est dolores corrupti sed cumque et dignissimos quo quod cupiditate numquam aut architecto vel iure quia laborum quod qui nulla.&quot;,
-        &quot;price&quot;: &quot;367.26&quot;,
-        &quot;created_at&quot;: &quot;2022-02-19T20:14:19.000000Z&quot;,
-        &quot;updated_at&quot;: &quot;2022-02-19T20:14:19.000000Z&quot;,
-        &quot;stock&quot;: {
-            &quot;id&quot;: 31,
-            &quot;product_id&quot;: &quot;small-copper-watch19&quot;,
-            &quot;products_in_stock&quot;: 100,
-            &quot;created_at&quot;: &quot;2022-02-19T20:14:30.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2022-02-19T20:14:30.000000Z&quot;
-        }
-    },
-    {
-        &quot;id&quot;: 32,
-        &quot;SKU&quot;: &quot;aerodynamic-concrete-coat34&quot;,
-        &quot;name&quot;: &quot;Aerodynamic Concrete Coat&quot;,
-        &quot;description&quot;: &quot;Ipsum odit voluptatum ea incidunt ut exercitationem perspiciatis aperiam rem possimus quaerat facere totam vel dolorem voluptate quia autem nostrum aut ipsum suscipit accusantium asperiores harum atque nulla non quisquam earum magni non provident pariatur.&quot;,
-        &quot;price&quot;: &quot;122.27&quot;,
-        &quot;created_at&quot;: &quot;2022-02-19T20:14:19.000000Z&quot;,
-        &quot;updated_at&quot;: &quot;2022-02-19T20:14:19.000000Z&quot;,
-        &quot;stock&quot;: {
-            &quot;id&quot;: 32,
-            &quot;product_id&quot;: &quot;aerodynamic-concrete-coat34&quot;,
-            &quot;products_in_stock&quot;: 100,
-            &quot;created_at&quot;: &quot;2022-02-19T20:14:31.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2022-02-19T20:14:31.000000Z&quot;
-        }
-    },
-    {
-        &quot;id&quot;: 33,
-        &quot;SKU&quot;: &quot;enormous-marble-hat39&quot;,
-        &quot;name&quot;: &quot;Enormous Marble Hat&quot;,
-        &quot;description&quot;: &quot;Et error eligendi ut sed id excepturi ut cumque minus consectetur quo quo quos eum quia enim autem facere animi voluptas in.&quot;,
-        &quot;price&quot;: &quot;958.91&quot;,
-        &quot;created_at&quot;: &quot;2022-02-19T20:14:20.000000Z&quot;,
-        &quot;updated_at&quot;: &quot;2022-02-19T20:14:20.000000Z&quot;,
-        &quot;stock&quot;: {
-            &quot;id&quot;: 33,
-            &quot;product_id&quot;: &quot;enormous-marble-hat39&quot;,
-            &quot;products_in_stock&quot;: 100,
-            &quot;created_at&quot;: &quot;2022-02-19T20:14:31.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2022-02-19T20:14:31.000000Z&quot;
-        }
-    },
-    {
-        &quot;id&quot;: 34,
-        &quot;SKU&quot;: &quot;ergonomic-wool-car37&quot;,
-        &quot;name&quot;: &quot;Ergonomic Wool Car&quot;,
-        &quot;description&quot;: &quot;Sit sit sint ab ducimus temporibus quae qui provident sed perspiciatis consequuntur ab assumenda repudiandae velit ullam ut molestiae tempora nostrum earum.&quot;,
-        &quot;price&quot;: &quot;412.36&quot;,
-        &quot;created_at&quot;: &quot;2022-02-19T20:14:20.000000Z&quot;,
-        &quot;updated_at&quot;: &quot;2022-02-19T20:14:20.000000Z&quot;,
-        &quot;stock&quot;: {
-            &quot;id&quot;: 34,
-            &quot;product_id&quot;: &quot;ergonomic-wool-car37&quot;,
-            &quot;products_in_stock&quot;: 100,
-            &quot;created_at&quot;: &quot;2022-02-19T20:14:31.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2022-02-19T20:14:31.000000Z&quot;
-        }
-    },
-    {
-        &quot;id&quot;: 35,
-        &quot;SKU&quot;: &quot;rustic-concrete-knife56&quot;,
-        &quot;name&quot;: &quot;Rustic Concrete Knife&quot;,
-        &quot;description&quot;: &quot;Voluptatibus illo rerum itaque eligendi temporibus aperiam voluptate unde eveniet quisquam quia omnis corporis praesentium neque non eaque culpa ipsum tempora ad sit blanditiis quisquam ullam dolor unde sunt.&quot;,
-        &quot;price&quot;: &quot;594.05&quot;,
-        &quot;created_at&quot;: &quot;2022-02-19T20:14:20.000000Z&quot;,
-        &quot;updated_at&quot;: &quot;2022-02-19T20:14:20.000000Z&quot;,
-        &quot;stock&quot;: {
-            &quot;id&quot;: 35,
-            &quot;product_id&quot;: &quot;rustic-concrete-knife56&quot;,
-            &quot;products_in_stock&quot;: 100,
-            &quot;created_at&quot;: &quot;2022-02-19T20:14:31.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2022-02-19T20:14:31.000000Z&quot;
-        }
-    },
-    {
-        &quot;id&quot;: 36,
-        &quot;SKU&quot;: &quot;durable-wool-chair1&quot;,
-        &quot;name&quot;: &quot;Durable Wool Chair&quot;,
-        &quot;description&quot;: &quot;Ut accusantium eligendi perspiciatis non quaerat velit harum labore animi quaerat cupiditate magnam ut corrupti numquam quis doloribus aut repudiandae nihil nihil alias odit voluptas inventore quasi non.&quot;,
-        &quot;price&quot;: &quot;607.97&quot;,
-        &quot;created_at&quot;: &quot;2022-02-19T20:14:20.000000Z&quot;,
-        &quot;updated_at&quot;: &quot;2022-02-19T20:14:20.000000Z&quot;,
-        &quot;stock&quot;: {
-            &quot;id&quot;: 36,
-            &quot;product_id&quot;: &quot;durable-wool-chair1&quot;,
-            &quot;products_in_stock&quot;: 100,
-            &quot;created_at&quot;: &quot;2022-02-19T20:14:31.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2022-02-19T20:14:31.000000Z&quot;
-        }
-    },
-    {
-        &quot;id&quot;: 37,
-        &quot;SKU&quot;: &quot;sleek-steel-chair90&quot;,
-        &quot;name&quot;: &quot;Sleek Steel Chair&quot;,
-        &quot;description&quot;: &quot;Rerum vitae consequatur similique quia repellendus aliquam libero dolor et omnis dolores placeat aut repellendus est ut et qui eius distinctio doloremque quia.&quot;,
-        &quot;price&quot;: &quot;754.12&quot;,
-        &quot;created_at&quot;: &quot;2022-02-19T20:14:20.000000Z&quot;,
-        &quot;updated_at&quot;: &quot;2022-02-19T20:14:20.000000Z&quot;,
-        &quot;stock&quot;: {
-            &quot;id&quot;: 37,
-            &quot;product_id&quot;: &quot;sleek-steel-chair90&quot;,
-            &quot;products_in_stock&quot;: 100,
-            &quot;created_at&quot;: &quot;2022-02-19T20:14:32.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2022-02-19T20:14:32.000000Z&quot;
-        }
-    },
-    {
-        &quot;id&quot;: 38,
-        &quot;SKU&quot;: &quot;heavy-duty-iron-shirt94&quot;,
-        &quot;name&quot;: &quot;Heavy Duty Iron Shirt&quot;,
-        &quot;description&quot;: &quot;Perspiciatis et mollitia veniam qui labore expedita quae rerum ut nostrum in optio qui enim voluptate voluptas culpa at mollitia maiores voluptate natus repellat sunt rerum in unde qui accusamus est blanditiis omnis eos et non voluptas enim laborum rerum qui.&quot;,
-        &quot;price&quot;: &quot;331.17&quot;,
-        &quot;created_at&quot;: &quot;2022-02-19T20:14:20.000000Z&quot;,
-        &quot;updated_at&quot;: &quot;2022-02-19T20:14:20.000000Z&quot;,
-        &quot;stock&quot;: {
-            &quot;id&quot;: 38,
-            &quot;product_id&quot;: &quot;heavy-duty-iron-shirt94&quot;,
-            &quot;products_in_stock&quot;: 100,
-            &quot;created_at&quot;: &quot;2022-02-19T20:14:32.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2022-02-19T20:14:32.000000Z&quot;
-        }
-    },
-    {
-        &quot;id&quot;: 39,
-        &quot;SKU&quot;: &quot;sleek-plastic-coat64&quot;,
-        &quot;name&quot;: &quot;Sleek Plastic Coat&quot;,
-        &quot;description&quot;: &quot;Sunt quas qui eos atque voluptatem cupiditate aliquid ut est minus quas facere pariatur voluptatem suscipit quam autem odio totam eum consequuntur.&quot;,
-        &quot;price&quot;: &quot;346.09&quot;,
-        &quot;created_at&quot;: &quot;2022-02-19T20:14:21.000000Z&quot;,
-        &quot;updated_at&quot;: &quot;2022-02-19T20:14:21.000000Z&quot;,
-        &quot;stock&quot;: {
-            &quot;id&quot;: 39,
-            &quot;product_id&quot;: &quot;sleek-plastic-coat64&quot;,
-            &quot;products_in_stock&quot;: 100,
-            &quot;created_at&quot;: &quot;2022-02-19T20:14:32.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2022-02-19T20:14:32.000000Z&quot;
-        }
-    },
-    {
-        &quot;id&quot;: 40,
-        &quot;SKU&quot;: &quot;sleek-wool-clock79&quot;,
-        &quot;name&quot;: &quot;Sleek Wool Clock&quot;,
-        &quot;description&quot;: &quot;Vitae a qui porro pariatur nihil aliquam iure tempora veniam odio ducimus doloremque quos in fugit dignissimos officia enim et amet modi pariatur quisquam illo qui quia vero alias qui id.&quot;,
-        &quot;price&quot;: &quot;353.69&quot;,
-        &quot;created_at&quot;: &quot;2022-02-19T20:14:21.000000Z&quot;,
-        &quot;updated_at&quot;: &quot;2022-02-19T20:14:21.000000Z&quot;,
-        &quot;stock&quot;: {
-            &quot;id&quot;: 40,
-            &quot;product_id&quot;: &quot;sleek-wool-clock79&quot;,
-            &quot;products_in_stock&quot;: 100,
-            &quot;created_at&quot;: &quot;2022-02-19T20:14:32.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2022-02-19T20:14:32.000000Z&quot;
-        }
-    },
-    {
-        &quot;id&quot;: 41,
-        &quot;SKU&quot;: &quot;gorgeous-leather-knife15&quot;,
-        &quot;name&quot;: &quot;Gorgeous Leather Knife&quot;,
-        &quot;description&quot;: &quot;Delectus dolor nesciunt nisi error ratione doloribus quisquam nihil deleniti odit eum a unde pariatur ducimus consequatur ut repellendus nostrum velit illum voluptate a veniam est dolor impedit eos numquam molestiae qui quidem natus illum maiores sint.&quot;,
-        &quot;price&quot;: &quot;274.98&quot;,
-        &quot;created_at&quot;: &quot;2022-02-19T20:14:21.000000Z&quot;,
-        &quot;updated_at&quot;: &quot;2022-02-19T20:14:21.000000Z&quot;,
-        &quot;stock&quot;: {
-            &quot;id&quot;: 41,
-            &quot;product_id&quot;: &quot;gorgeous-leather-knife15&quot;,
-            &quot;products_in_stock&quot;: 100,
-            &quot;created_at&quot;: &quot;2022-02-19T20:14:32.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2022-02-19T20:14:32.000000Z&quot;
-        }
-    },
-    {
-        &quot;id&quot;: 42,
-        &quot;SKU&quot;: &quot;durable-bronze-knife55&quot;,
-        &quot;name&quot;: &quot;Durable Bronze Knife&quot;,
-        &quot;description&quot;: &quot;Sunt iure amet omnis qui illum nihil et autem ab vel eveniet voluptatem quod ad facilis sit ullam velit.&quot;,
-        &quot;price&quot;: &quot;857.90&quot;,
-        &quot;created_at&quot;: &quot;2022-02-19T20:14:21.000000Z&quot;,
-        &quot;updated_at&quot;: &quot;2022-02-19T20:14:21.000000Z&quot;,
-        &quot;stock&quot;: {
-            &quot;id&quot;: 42,
-            &quot;product_id&quot;: &quot;durable-bronze-knife55&quot;,
-            &quot;products_in_stock&quot;: 100,
-            &quot;created_at&quot;: &quot;2022-02-19T20:14:33.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2022-02-19T20:14:33.000000Z&quot;
-        }
-    },
-    {
-        &quot;id&quot;: 43,
-        &quot;SKU&quot;: &quot;intelligent-iron-pants39&quot;,
-        &quot;name&quot;: &quot;Intelligent Iron Pants&quot;,
-        &quot;description&quot;: &quot;Eaque itaque sint nisi blanditiis illo et quidem exercitationem dicta illum commodi autem omnis ut itaque nam blanditiis libero facere corporis natus consequuntur iusto perferendis exercitationem praesentium officia ea omnis.&quot;,
-        &quot;price&quot;: &quot;187.20&quot;,
-        &quot;created_at&quot;: &quot;2022-02-19T20:14:21.000000Z&quot;,
-        &quot;updated_at&quot;: &quot;2022-02-19T20:14:21.000000Z&quot;,
-        &quot;stock&quot;: {
-            &quot;id&quot;: 43,
-            &quot;product_id&quot;: &quot;intelligent-iron-pants39&quot;,
-            &quot;products_in_stock&quot;: 100,
-            &quot;created_at&quot;: &quot;2022-02-19T20:14:33.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2022-02-19T20:14:33.000000Z&quot;
-        }
-    },
-    {
-        &quot;id&quot;: 44,
-        &quot;SKU&quot;: &quot;heavy-duty-iron-gloves91&quot;,
-        &quot;name&quot;: &quot;Heavy Duty Iron Gloves&quot;,
-        &quot;description&quot;: &quot;Voluptatem quae molestiae et velit explicabo voluptatum nam est aliquid labore repellendus praesentium temporibus non distinctio natus error minima autem amet quae asperiores voluptas et corrupti est eos ad quis ab debitis sit aut expedita facere.&quot;,
-        &quot;price&quot;: &quot;953.01&quot;,
-        &quot;created_at&quot;: &quot;2022-02-19T20:14:22.000000Z&quot;,
-        &quot;updated_at&quot;: &quot;2022-02-19T20:14:22.000000Z&quot;,
-        &quot;stock&quot;: {
-            &quot;id&quot;: 44,
-            &quot;product_id&quot;: &quot;heavy-duty-iron-gloves91&quot;,
-            &quot;products_in_stock&quot;: 100,
-            &quot;created_at&quot;: &quot;2022-02-19T20:14:33.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2022-02-19T20:14:33.000000Z&quot;
-        }
-    },
-    {
-        &quot;id&quot;: 45,
-        &quot;SKU&quot;: &quot;ergonomic-steel-chair20&quot;,
-        &quot;name&quot;: &quot;Ergonomic Steel Chair&quot;,
-        &quot;description&quot;: &quot;Eos molestias atque odio et est dolorum laborum delectus et dolor et sed ipsum non mollitia modi quam vel doloribus quaerat ut vel ea soluta voluptatem ea fugit voluptas deleniti natus consequatur sit occaecati quam.&quot;,
-        &quot;price&quot;: &quot;770.96&quot;,
-        &quot;created_at&quot;: &quot;2022-02-19T20:14:22.000000Z&quot;,
-        &quot;updated_at&quot;: &quot;2022-02-19T20:14:22.000000Z&quot;,
-        &quot;stock&quot;: {
-            &quot;id&quot;: 45,
-            &quot;product_id&quot;: &quot;ergonomic-steel-chair20&quot;,
-            &quot;products_in_stock&quot;: 100,
-            &quot;created_at&quot;: &quot;2022-02-19T20:14:33.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2022-02-19T20:14:33.000000Z&quot;
-        }
-    },
-    {
-        &quot;id&quot;: 46,
-        &quot;SKU&quot;: &quot;aerodynamic-granite-shirt99&quot;,
-        &quot;name&quot;: &quot;Aerodynamic Granite Shirt&quot;,
-        &quot;description&quot;: &quot;Aperiam aperiam voluptatum ratione impedit recusandae voluptatem dolor ea ut ea aliquid totam in blanditiis minus temporibus cumque aut dolor sit cupiditate quam dignissimos qui impedit nihil repudiandae tempore ducimus aperiam consequuntur aliquid dolorem facilis dolores quasi dolore sunt placeat.&quot;,
-        &quot;price&quot;: &quot;437.35&quot;,
-        &quot;created_at&quot;: &quot;2022-02-19T20:14:22.000000Z&quot;,
-        &quot;updated_at&quot;: &quot;2022-02-19T20:14:22.000000Z&quot;,
-        &quot;stock&quot;: {
-            &quot;id&quot;: 46,
-            &quot;product_id&quot;: &quot;aerodynamic-granite-shirt99&quot;,
-            &quot;products_in_stock&quot;: 100,
-            &quot;created_at&quot;: &quot;2022-02-19T20:14:33.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2022-02-19T20:14:33.000000Z&quot;
-        }
-    },
-    {
-        &quot;id&quot;: 47,
-        &quot;SKU&quot;: &quot;heavy-duty-copper-knife15&quot;,
-        &quot;name&quot;: &quot;Heavy Duty Copper Knife&quot;,
-        &quot;description&quot;: &quot;Vel illum minima eos mollitia ipsa est autem labore ut est odio at aut saepe aut sint hic nesciunt ab ut atque sapiente hic cum voluptatem consequatur.&quot;,
-        &quot;price&quot;: &quot;255.55&quot;,
-        &quot;created_at&quot;: &quot;2022-02-19T20:14:22.000000Z&quot;,
-        &quot;updated_at&quot;: &quot;2022-02-19T20:14:22.000000Z&quot;,
-        &quot;stock&quot;: {
-            &quot;id&quot;: 47,
-            &quot;product_id&quot;: &quot;heavy-duty-copper-knife15&quot;,
-            &quot;products_in_stock&quot;: 100,
-            &quot;created_at&quot;: &quot;2022-02-19T20:14:33.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2022-02-19T20:14:33.000000Z&quot;
-        }
-    },
-    {
-        &quot;id&quot;: 48,
-        &quot;SKU&quot;: &quot;awesome-leather-chair71&quot;,
-        &quot;name&quot;: &quot;Awesome Leather Chair&quot;,
-        &quot;description&quot;: &quot;Occaecati est quia eligendi quisquam deserunt temporibus quia tenetur nihil nam commodi quisquam cum repudiandae et quasi dignissimos accusamus libero placeat fugit.&quot;,
-        &quot;price&quot;: &quot;443.30&quot;,
-        &quot;created_at&quot;: &quot;2022-02-19T20:14:22.000000Z&quot;,
-        &quot;updated_at&quot;: &quot;2022-02-19T20:14:22.000000Z&quot;,
-        &quot;stock&quot;: {
-            &quot;id&quot;: 48,
-            &quot;product_id&quot;: &quot;awesome-leather-chair71&quot;,
-            &quot;products_in_stock&quot;: 100,
-            &quot;created_at&quot;: &quot;2022-02-19T20:14:33.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2022-02-19T20:14:33.000000Z&quot;
-        }
-    },
-    {
-        &quot;id&quot;: 49,
-        &quot;SKU&quot;: &quot;synergistic-plastic-table52&quot;,
-        &quot;name&quot;: &quot;Synergistic Plastic Table&quot;,
-        &quot;description&quot;: &quot;Qui sint eius debitis delectus dicta ut et dolorum voluptas qui eaque molestiae laudantium rerum atque molestiae nihil itaque dolorem incidunt iusto ab itaque et.&quot;,
-        &quot;price&quot;: &quot;84.93&quot;,
-        &quot;created_at&quot;: &quot;2022-02-19T20:14:22.000000Z&quot;,
-        &quot;updated_at&quot;: &quot;2022-02-19T20:14:22.000000Z&quot;,
-        &quot;stock&quot;: {
-            &quot;id&quot;: 49,
-            &quot;product_id&quot;: &quot;synergistic-plastic-table52&quot;,
-            &quot;products_in_stock&quot;: 100,
-            &quot;created_at&quot;: &quot;2022-02-19T20:14:34.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2022-02-19T20:14:34.000000Z&quot;
-        }
-    },
-    {
-        &quot;id&quot;: 50,
-        &quot;SKU&quot;: &quot;enormous-steel-car23&quot;,
-        &quot;name&quot;: &quot;Enormous Steel Car&quot;,
-        &quot;description&quot;: &quot;Minus reiciendis voluptate nesciunt deleniti repudiandae eos cupiditate voluptatem sed fuga modi et accusantium aut suscipit eius quo voluptas provident quia id iure ut facere.&quot;,
-        &quot;price&quot;: &quot;706.95&quot;,
-        &quot;created_at&quot;: &quot;2022-02-19T20:14:23.000000Z&quot;,
-        &quot;updated_at&quot;: &quot;2022-02-19T20:14:23.000000Z&quot;,
-        &quot;stock&quot;: {
-            &quot;id&quot;: 50,
-            &quot;product_id&quot;: &quot;enormous-steel-car23&quot;,
-            &quot;products_in_stock&quot;: 100,
-            &quot;created_at&quot;: &quot;2022-02-19T20:14:34.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2022-02-19T20:14:34.000000Z&quot;
+            &quot;created_at&quot;: &quot;2022-02-19T23:33:52.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2022-02-19T23:33:52.000000Z&quot;
         }
     }
 ]</code>
@@ -1500,9 +940,9 @@ fetch(url, {
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
     --data "{
-    \"name\": \"non\",
-    \"email\": \"atque\",
-    \"password\": \"quasi\"
+    \"name\": \"magni\",
+    \"email\": \"ratione\",
+    \"password\": \"repellat\"
 }"
 </code></pre></div>
 
@@ -1518,9 +958,9 @@ const headers = {
 };
 
 let body = {
-    "name": "non",
-    "email": "atque",
-    "password": "quasi"
+    "name": "magni",
+    "email": "ratione",
+    "password": "repellat"
 };
 
 fetch(url, {
@@ -1578,7 +1018,7 @@ fetch(url, {
                 <input type="text"
                name="name"
                data-endpoint="POSTapi-register"
-               value="non"
+               value="magni"
                data-component="body" hidden>
     <br>
 
@@ -1588,7 +1028,7 @@ fetch(url, {
                 <input type="text"
                name="email"
                data-endpoint="POSTapi-register"
-               value="atque"
+               value="ratione"
                data-component="body" hidden>
     <br>
 
@@ -1598,7 +1038,7 @@ fetch(url, {
                 <input type="text"
                name="password"
                data-endpoint="POSTapi-register"
-               value="quasi"
+               value="repellat"
                data-component="body" hidden>
     <br>
 
@@ -1622,8 +1062,8 @@ fetch(url, {
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
     --data "{
-    \"email\": \"cupiditate\",
-    \"password\": \"ut\"
+    \"email\": \"quia\",
+    \"password\": \"et\"
 }"
 </code></pre></div>
 
@@ -1639,8 +1079,8 @@ const headers = {
 };
 
 let body = {
-    "email": "cupiditate",
-    "password": "ut"
+    "email": "quia",
+    "password": "et"
 };
 
 fetch(url, {
@@ -1698,7 +1138,7 @@ fetch(url, {
                 <input type="text"
                name="email"
                data-endpoint="POSTapi-login"
-               value="cupiditate"
+               value="quia"
                data-component="body" hidden>
     <br>
 
@@ -1708,7 +1148,7 @@ fetch(url, {
                 <input type="text"
                name="password"
                data-endpoint="POSTapi-login"
-               value="ut"
+               value="et"
                data-component="body" hidden>
     <br>
 
