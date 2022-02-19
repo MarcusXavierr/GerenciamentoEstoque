@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Helpers\SaveStockMovementReport;
 use App\Models\Product;
 use App\Models\Stock;
 use Exception;
@@ -20,6 +21,13 @@ class StockMovementApiController extends Controller
     private array $errorValidating = [
         "message" => 'You did not fill in all the required fields.'
     ];
+
+    private SaveStockMovementReport $saveReport;
+
+    public function __construct()
+    {
+        $this->saveReport = new SaveStockMovementReport();
+    }
 
     public function index()
     {
@@ -53,7 +61,8 @@ class StockMovementApiController extends Controller
         if (!$isUpdated) {
             return response(['response' => 'Error while updating stock, please try later'], 400);
         }
-        $this->saveReportOfMovementOnDB($response['product']->SKU, $response['stock']->id, $data['quantity']);
+        $this->saveReport
+            ->saveReportOfMovementOnDB($response['product']->SKU, $response['stock']->id, $data['quantity'], true);
 
         return response([
             'stock' => Stock::find($response['stock']->id),
@@ -89,7 +98,10 @@ class StockMovementApiController extends Controller
             return response(['message' => 'Error while updating stock, please try later'], 401);
         }
 
-        $this->saveReportOfMovementOnDB($response['product']->SKU, $response['stock']->id, -$data['quantity']);
+        //Save stock movement report
+        $this->saveReport
+            ->saveReportOfMovementOnDB($response['product']->SKU, $response['stock']->id, -$data['quantity'], true);
+
         return response([
             'stock' => Stock::find($response['stock']->id),
             'message' => 'Stock updated successfully'
@@ -132,28 +144,5 @@ class StockMovementApiController extends Controller
 
         $data = $validator->validated();
         return $data;
-    }
-
-
-    /**
-     * Save data in a database table that stores information about the stock movement
-     */
-    private function saveReportOfMovementOnDB(string $SKU, int $stock_id, int $quantity): bool
-    {
-        $success = true;
-        try {
-            DB::table('stock_movements')->insert([
-                "product_id" => $SKU,
-                "stock_id" => $stock_id,
-                "is_api" => true,
-                "products_movemented" => $quantity,
-                "created_at" => now(),
-                "updated_at" => now()
-            ]);
-        } catch (Exception) {
-            $success = false;
-        }
-
-        return $success;
     }
 }
