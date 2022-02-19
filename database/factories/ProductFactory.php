@@ -17,7 +17,7 @@ class ProductFactory extends Factory
         $this->faker->addProvider(new \Bezhanov\Faker\Provider\Commerce($this->faker));
 
         $name  = $this->faker->productName;
-        $sku   = Str::slug($name, '-'); //vou usar slug só nos testes
+        $sku   = Str::slug($name, '-') . rand(0, 100); //vou usar slug só nos testes
         $price = $this->faker->randomFloat(2, 1000, 20);
         $description = $this->faker->sentence(30);
 

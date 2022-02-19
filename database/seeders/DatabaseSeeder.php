@@ -26,7 +26,7 @@ class DatabaseSeeder extends Seeder
         );
 
         //Create 10 products, and create and stock table for each product
-        Product::factory(10)->create()
+        Product::factory(50)->create()
             ->each(function ($product) {
                 $this->addStock($product);
             });
