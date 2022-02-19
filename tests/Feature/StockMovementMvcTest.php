@@ -133,7 +133,16 @@ class StockMovementMvcTest extends TestCase
     }
 
     //retorna erro quando o user tenta remover mais produtos do que existem no estoque
-
+    public function test_validates_when_user_tries_to_remove_more_stock_than_it_can()
+    {
+        /** @var Authenticatable $user */
+        $user = User::factory()->create();
+        $product = $this->createProductAndStock();
+        $payload = ['quantity' => 1000];
+        $response = $this->actingAs($user)->post('/baixar-produtos/1', $payload);
+        $response->assertStatus(302);
+        $response->assertRedirect('/baixar-produtos/1');
+    }
 
     /**
      * Helper function that creates an instance of Product, and creates a stock for it in the database
