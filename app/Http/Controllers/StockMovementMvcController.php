@@ -37,4 +37,29 @@ class StockMovementMvcController extends Controller
         $this->saveReport->saveReportOfMovementOnDB($stock->product_id, $stock->id, $data['quantity'], false);
         return 'Success : ' . $stock->products_in_stock;
     }
+
+    public function showRemoveProductPage($id)
+    {
+        $product = Product::findOrFail($id);
+        return view('stock_movements.remove_stock', compact('product'));
+    }
+
+    public function removeProduct(Request $request, $id)
+    {
+        $data = $request->all();
+        $stock = Stock::findOrFail($id);
+        if ($stock->products_in_stock < $data['quantity']) {
+            return 'Não foi possivel dar baixar nesse estoque porque não há produtos o bastante';
+        }
+        $isUpdated = $stock->update([
+            'products_in_stock' => $stock->products_in_stock - $data['quantity']
+        ]);
+
+        if (!$isUpdated) {
+            return 'Error';
+        }
+
+        $this->saveReport->saveReportOfMovementOnDB($stock->product_id, $stock->id, -$data['quantity'], false);
+        return 'Success : ' . $stock->products_in_stock;
+    }
 }
