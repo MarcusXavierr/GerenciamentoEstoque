@@ -10,7 +10,7 @@ use Illuminate\Support\Facades\DB;
 use Illuminate\Database\Eloquent\ModelNotFoundException;
 use Illuminate\Support\Facades\Validator;
 
-class StockMovementController extends Controller
+class StockMovementApiController extends Controller
 {
 
     private array $productNotFoundObject = [

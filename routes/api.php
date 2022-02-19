@@ -1,7 +1,7 @@
 <?php
 
 use App\Http\Controllers\AuthController;
-use App\Http\Controllers\StockMovementController;
+use App\Http\Controllers\StockMovementApiController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -23,9 +23,9 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 
 Route::group(['middleware' => ['auth:sanctum']], function () {
     Route::post('/logout', [AuthController::class, 'logout']);
-    Route::get('/listar-produtos', [StockMovementController::class, 'index']);
-    Route::post('/adicionar-produtos', [StockMovementController::class, 'addStock'])->name('stock.add');
-    Route::post('/baixar-produtos', [StockMovementController::class, "removeStock"])->name('stock.remove');
+    Route::get('/listar-produtos', [StockMovementApiController::class, 'index']);
+    Route::post('/adicionar-produtos', [StockMovementApiController::class, 'addStock'])->name('stock.add');
+    Route::post('/baixar-produtos', [StockMovementApiController::class, "removeStock"])->name('stock.remove');
 });
 
 Route::post('/register', [AuthController::class, 'register']);
