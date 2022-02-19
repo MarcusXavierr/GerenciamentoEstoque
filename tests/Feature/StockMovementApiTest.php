@@ -12,7 +12,7 @@ use Laravel\Sanctum\Sanctum;
 use PhpParser\Node\Expr\Print_;
 use Tests\TestCase;
 
-class StockMovementTest extends TestCase
+class StockMovementApiTest extends TestCase
 {
 
     use DatabaseMigrations;
