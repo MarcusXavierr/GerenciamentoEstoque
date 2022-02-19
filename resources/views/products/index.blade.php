@@ -8,9 +8,8 @@
             <thead>
                 <tr>
                     <th>Nome</th>
-                    <th>SKU</th>
+                    <th>Descrição</th>
                     <th>Preço</th>
-                    <th>Estoque</th>
                     <th>Actions</th>
                 </tr>
             </thead>
@@ -18,9 +17,8 @@
                 @foreach ($products as $product)
                     <tr>
                         <td>{{$product->name}}</td>
-                        <td>{{$product->SKU}}</td>
+                        <td>{{$product->description}}</td>
                         <td>R$ {{number_format($product->price, 2, ',', '.')}}</td>
-                        <td>{{$product->stock->products_in_stock}}</td>
                         <td>
                             <div class="btn-group flex-wrap">
                                 <a class="btn btn-outline-primary btn-sm" href="{{route('product.edit', ['product' => $product->id])}}">Editar</a>
@@ -31,5 +29,6 @@
                 @endforeach
             </tbody>
         </table>
+        {{$products->links()}}
     </div>
 @endsection
