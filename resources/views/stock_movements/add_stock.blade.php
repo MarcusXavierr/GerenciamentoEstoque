@@ -14,7 +14,7 @@
         <form action="{{route('stock.add', ['id' => $product->stock->id])}}" method="post">
             @csrf
             <div class="input-group">
-                <input type="number" class="form-control">
+                <input type="number" name="quantity" class="form-control">
                 <button class="btn btn-outline-primary" >Enviar</button>
             </div>
             
