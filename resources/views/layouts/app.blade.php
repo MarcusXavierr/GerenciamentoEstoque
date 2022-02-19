@@ -42,6 +42,10 @@
                         <li class="nav-item">
                             <a href="{{route('product.index')}}" class="nav-link">Produtos</a>
                         </li>
+
+                        <li class="nav-item">
+                            <a href="{{route('stock.index')}}" class="nav-link">Controle de estoque</a>
+                        </li>
                         @endauth
                     </ul>
 
