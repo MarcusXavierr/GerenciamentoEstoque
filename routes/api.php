@@ -24,8 +24,8 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 Route::group(['middleware' => ['auth:sanctum']], function () {
     Route::post('/logout', [AuthController::class, 'logout']);
     Route::get('/listar-produtos', [StockMovementApiController::class, 'index']);
-    Route::post('/adicionar-produtos', [StockMovementApiController::class, 'addStock'])->name('stock.add');
-    Route::post('/baixar-produtos', [StockMovementApiController::class, "removeStock"])->name('stock.remove');
+    Route::post('/adicionar-produtos', [StockMovementApiController::class, 'addStock']);
+    Route::post('/baixar-produtos', [StockMovementApiController::class, "removeStock"]);
 });
 
 Route::post('/register', [AuthController::class, 'register']);
