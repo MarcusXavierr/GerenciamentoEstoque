@@ -28,3 +28,4 @@ Route::get('/adicionar-produtos/{id}', [StockMovementMvcController::class, 'show
 Route::get('/baixar-produtos/{id}', [StockMovementMvcController::class, 'showRemoveProductPage'])->name('stock.remove.show');
 Route::post('/adicionar-produtos/{id}', [StockMovementMvcController::class, 'addProduct'])->name('stock.add');
 Route::post('/baixar-produtos/{id}', [StockMovementMvcController::class, 'removeProduct'])->name('stock.remove');
+Route::get('/listar-estoque', [StockMovementMvcController::class, 'index'])->name('stock.index');
