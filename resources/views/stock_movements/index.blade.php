@@ -2,12 +2,11 @@
 
 @section('content')
     <div class="container">
-        <h2>Listagem de produtos</h2>
-        <a class="btn btn-success" href="{{route('product.create')}}">Criar produto</a>
+        <h2>Estoque de produtos</h2>
         <table class="table table-bordered table-responsive mt-3">
             <thead>
                 <tr>
-                    <th>Nome</th>
+                    <th>Produto</th>
                     <th>Estoque Atual</th>
                     <th>Ações</th>
                 </tr>
