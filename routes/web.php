@@ -15,13 +15,10 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
 
 Auth::routes();
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::resource('product', 'App\Http\Controllers\ProductController');
 
 Route::get('/adicionar-produtos/{id}', [StockMovementMvcController::class, 'showAddProductPage'])->name('stock.add.show');
