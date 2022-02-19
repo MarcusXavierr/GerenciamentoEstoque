@@ -42,6 +42,11 @@ class StockMovementApiController extends Controller
 
 
 
+    /**
+     * @bodyParam id int required The id of the product. Example: 9
+     * @bodyParam quantity int required The number of products tha you want to add in stock. Example: 50  
+     */
+
     public function addStock(Request $request)
     {
         //get validated data
@@ -70,7 +75,10 @@ class StockMovementApiController extends Controller
         ], 201);
     }
 
-
+    /**
+     * @bodyParam id int required The id of the product. Example: 7
+     * @bodyParam quantity int required The number of products tha you want to remove from stock. Example: 50  
+     */
     public function removeStock(Request $request)
     {
         //get validated data
