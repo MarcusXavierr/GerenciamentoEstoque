@@ -11,6 +11,9 @@ use Illuminate\Support\Facades\Hash;
 class AuthController extends Controller
 {
 
+    /**
+     * @unauthenticated
+     */
     public function register(Request $request)
     {
         $fields = $request->validate([
@@ -35,6 +38,9 @@ class AuthController extends Controller
         return response($response, 201);
     }
 
+    /**
+     * @unauthenticated
+     */
     public function login(Request $request)
     {
         $fields = $request->validate([
