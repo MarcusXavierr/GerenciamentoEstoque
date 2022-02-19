@@ -14,7 +14,9 @@ class StockMovementMvcController extends Controller
     public function __construct()
     {
         $this->saveReport = new SaveStockMovementReport();
+        $this->middleware('auth');
     }
+
 
     public function showAddProductPage($id)
     {
