@@ -17,7 +17,11 @@
                 <input type="number" name="quantity" class="form-control">
                 <button class="btn btn-outline-primary" >Enviar</button>
             </div>
-            
+            @if ($errors->has('quantity'))
+                <span class="help-block text-sm text-danger ">
+                    {{ $errors->first('quantity') }}
+                </span>
+            @endif
         </form>
     </div>
 @endsection

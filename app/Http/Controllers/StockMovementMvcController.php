@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Helpers\SaveStockMovementReport;
+use App\Http\Requests\StockMovementFormRequest;
 use App\Models\Product;
 use App\Models\Stock;
 use Illuminate\Http\Request;
@@ -18,13 +19,21 @@ class StockMovementMvcController extends Controller
     }
 
 
+    public function index()
+    {
+        $products = Product::paginate(25);
+        return view('stock_movements.index', compact('products'));
+    }
+
+
+
     public function showAddProductPage($id)
     {
         $product = Product::findOrFail($id);
         return view('stock_movements.add_stock', compact('product'));
     }
 
-    public function addProduct(Request $request, $id)
+    public function addProduct(StockMovementFormRequest $request, $id)
     {
         $data = $request->all();
         $stock = Stock::findOrFail($id);
@@ -37,7 +46,8 @@ class StockMovementMvcController extends Controller
             return 'Error';
         }
         $this->saveReport->saveReportOfMovementOnDB($stock->product_id, $stock->id, $data['quantity'], false);
-        return 'Success : ' . $stock->products_in_stock;
+        notify()->success('Estoque adicionado com sucesso', 'Tudo ok');
+        return redirect()->route('stock.index');
     }
 
     public function showRemoveProductPage($id)
@@ -46,7 +56,7 @@ class StockMovementMvcController extends Controller
         return view('stock_movements.remove_stock', compact('product'));
     }
 
-    public function removeProduct(Request $request, $id)
+    public function removeProduct(StockMovementFormRequest $request, $id)
     {
         $data = $request->all();
         $stock = Stock::findOrFail($id);
@@ -66,7 +76,7 @@ class StockMovementMvcController extends Controller
             return 'Error';
         }
 
-        $this->saveReport->saveReportOfMovementOnDB($stock->product_id, $stock->id, -$data['quantity'], false);
-        return 'Success : ' . $stock->products_in_stock;
+        notify()->success('Você deu baixa nos produtos com sucesso', 'Tudo ok');
+        return redirect()->route('stock.index');
     }
 }

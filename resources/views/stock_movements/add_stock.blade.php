@@ -13,10 +13,15 @@
        </div>
         <form action="{{route('stock.add', ['id' => $product->stock->id])}}" method="post">
             @csrf
-            <div class="input-group">
-                <input type="number" name="quantity" class="form-control">
+            <div class="input-group"> 
+                <input type="number" name="quantity" class="form-control"> 
                 <button class="btn btn-outline-primary" >Enviar</button>
             </div>
+            @if ($errors->has('quantity'))
+                <span class="help-block text-sm text-danger ">
+                    {{ $errors->first('quantity') }}
+                </span>
+            @endif
             
         </form>
     </div>
