@@ -75,7 +75,7 @@ class StockMovementMvcController extends Controller
         if (!$isUpdated) {
             return 'Error';
         }
-
+        $this->saveReport->saveReportOfMovementOnDB($stock->product_id, $stock->id, -$data['quantity'], false);
         notify()->success('Você deu baixa nos produtos com sucesso', 'Tudo ok');
         return redirect()->route('stock.index');
     }
