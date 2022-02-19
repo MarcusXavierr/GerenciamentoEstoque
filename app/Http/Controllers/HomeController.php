@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use Carbon\Carbon;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class HomeController extends Controller
 {
@@ -23,6 +25,11 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
+
+        $relatory = DB::table('stock_movements')
+            ->join('products', 'products.SKU', 'stock_movements.product_id')
+            ->whereDate('stock_movements.created_at', now())
+            ->orderBy('stock_movements.created_at', 'desc')->get();
+        return view('home', compact('relatory'));
     }
 }
