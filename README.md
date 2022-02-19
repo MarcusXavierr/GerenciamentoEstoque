@@ -5,7 +5,7 @@ O setup é feito com docker, então é preciso ter o docker e docker-compose ins
 
 Será necessário prencher os campos do banco de dados no arquivo .env (o docker-compose precisa dessas variaveis para criar o banco de dados), e também é necessario preencher os campos USER e UID no final do .env, que são o nome do user e o ID dele.
 
-O projeto usa PHP8.
+O projeto usa PHP 8 e MySQL 5.7.
 
 ## Setup
 Primeiro rode o comando abaixo para rodar os containers e fazer build do Dockerfile
