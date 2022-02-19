@@ -62,7 +62,7 @@ class ProductTest extends TestCase
         $this->assertNotEquals($newProduct->price, $data['price']);
     }
 
-    public function test_guest_can_delete_product()
+    public function test_guest_cannot_delete_product()
     {
         $product = Product::factory()->create();
         $id = $product->id;
