@@ -51,7 +51,12 @@ class StockMovementMvcController extends Controller
         $data = $request->all();
         $stock = Stock::findOrFail($id);
         if ($stock->products_in_stock < $data['quantity']) {
-            return 'Não foi possivel dar baixar nesse estoque porque não há produtos o bastante';
+            notify()
+                ->error(
+                    'Não foi possivel dar baixar nesse estoque porque não há produtos o bastante',
+                    "Erro ao dar baixa em produto"
+                );
+            return redirect()->route('stock.remove.show', ['id' => $id]);
         }
         $isUpdated = $stock->update([
             'products_in_stock' => $stock->products_in_stock - $data['quantity']
