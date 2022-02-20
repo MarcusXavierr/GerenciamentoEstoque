@@ -53,5 +53,6 @@ Clicando na aba Produtos você verá uma listagem de produtos e poderá editar, 
 E clicando em Controle de Estoque você será redirecionado para uma página que te permite adicionar o estoque de um produto, ou dar baixa nesse estoque de produtos
 ![](imgs/stock.jpg)
 
+Caso você deseje retornar para a página home, basta clicar na logo do navbar
 
 Você pode ver a documentação das APIs em http://localhost/docs
