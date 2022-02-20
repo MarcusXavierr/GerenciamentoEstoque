@@ -22,7 +22,8 @@ Após baixar as dependencias, será preciso rodar as migrations
 ```docker
 docker-compose exec app php artisan migrate
 ```
-caso o container do laravel não consiga se conectar no container do mysql, espere alguns segundos e tente novamente.
+caso o container do laravel não consiga se conectar no container do mysql, espere alguns um pouco e tente novamente.
+Na minha experiência o container do banco de dados demorava um pouco ficar acessível pelo container do laravel na primeira vez que rodava. Nas próximas vezes já vai funcionar instântaneamente
 
 E caso você queira popular as tabelas do banco de dados com o Seeder, rode esse comando
 ```docker
